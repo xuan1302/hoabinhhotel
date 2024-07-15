@@ -88,3 +88,54 @@ if ( !function_exists( 'elementor_pagination' ) ) {
         }
     }
 }
+
+function create_orders_hotel_table() {
+    global $wpdb;
+    global $custom_table_version;
+
+    $table_name = $wpdb->prefix . 'orders_hotel';
+
+    $charset_collate = $wpdb->get_charset_collate();
+
+    $sql = "CREATE TABLE $table_name (
+        id mediumint(9) NOT NULL AUTO_INCREMENT,
+        totalRooms tinytext NOT NULL,
+        totalMoney tinytext NOT NULL,
+        totalAdult tinytext NOT NULL,
+        totalChildren tinytext NOT NULL,
+        fromDate datetime DEFAULT '0000-00-00 00:00:00' NOT NULL,
+        toDate datetime DEFAULT '0000-00-00 00:00:00' NOT NULL,
+        PRIMARY KEY  (id)
+    ) $charset_collate;";
+
+    require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
+    dbDelta($sql);
+
+    add_option('order_hotel_table_version', $custom_table_version);
+}
+
+function create_orders_hotel_rooms_table() {
+    global $wpdb;
+    global $custom_table_version;
+
+    $table_name = $wpdb->prefix . 'orders_room_hotel';
+
+    $charset_collate = $wpdb->get_charset_collate();
+
+    $sql = "CREATE TABLE $table_name (
+        id mediumint(9) NOT NULL AUTO_INCREMENT,
+        idRoomOrder tinytext NOT NULL,
+        quantity tinytext NOT NULL,
+        PRIMARY KEY  (id)
+    ) $charset_collate;";
+
+    require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
+    dbDelta($sql);
+
+    add_option('create_orders_hotel_rooms_table_version', $custom_table_version);
+}
+function create_custom_table_on_theme_activation() {
+    create_orders_hotel_table();
+    create_orders_hotel_rooms_table();
+}
+add_action('after_setup_theme', 'create_custom_table_on_theme_activation');
