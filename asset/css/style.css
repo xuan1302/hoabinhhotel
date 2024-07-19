@@ -38,3 +38,39 @@ body{
     margin: 20px 0;
     display: inline-block;}
   .contant_box_404{ margin-top:-50px;}
+a{
+    color: #fff;
+}
+a:hover{
+    color: #000;
+    text-decoration: none;
+}
+a:visited {
+    color: #fff;
+}
+#topbar{
+    height: 44px;
+    background-color: #7E522B;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+.content-topbar{
+    padding: 0 57px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.left-topbar, .right-topbar{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.left-topbar .item, .right-topbar .item{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+.left-topbar .icon, .right-topbar .icon{
+    line-height: 0;
+}

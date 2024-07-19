@@ -26,14 +26,16 @@ function xxx_scripts() {
 add_action( 'wp_enqueue_scripts', 'xxx_scripts',10 );
 
 
-// if ( ! function_exists( 'ssls_setup' ) ) :
-//     function ssls_setup() {
-//         register_nav_menus( array(
-//             'menu-footer'   => esc_html__( 'Menu footer', 'SSls' ),
-//         ) );
-//     }
-// endif;
-// add_action( 'after_setup_theme', 'ssls_setup' );
+ if ( ! function_exists( 'ssls_setup' ) ) :
+     function ssls_setup() {
+         register_nav_menus( array(
+             'menu-main-left'   => esc_html__( 'Menu main left', 'SSls' ),
+             'menu-main-right'   => esc_html__( 'Menu main right', 'SSls' ),
+             'menu-mobile'   => esc_html__( 'Menu mobile', 'SSls' ),
+         ) );
+     }
+ endif;
+ add_action( 'after_setup_theme', 'ssls_setup' );
 
 add_image_size( 'blog-thumbnail', 420,240, true );
 
