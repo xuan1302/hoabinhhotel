@@ -1,0 +1,75 @@
+.archive-contain .content{
+   padding: 64px 57px; 
+}
+.archive-contain .entry-title h1{
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+    color: #353535;
+    margin-bottom: 8px;
+}
+.archive-contain .post-thumbnail{
+    height: 271px;
+}
+.archive-contain .entry-summary{
+    margin-top: 0;
+}
+.archive-contain{
+    background: #F5F5F5;
+}
+.archive-contain .entry-summary p{
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #555555;
+    margin-bottom: 16px;
+}
+.archive-contain .post-thumbnail img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.archive-contain .inner{
+    text-align: left;
+    padding: 24px;
+    background: #FFF;
+    min-height: 208px;
+}
+.archive-contain .readmore-block a{
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 16px;
+    color: #00434F;
+    text-transform: uppercase;
+}
+.archive-contain .pagination-custom{
+    margin-top: 40px;
+    padding-top: 20px;
+}
+.pagination-custom .page-numbers{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+.pagination-custom .page-numbers a, .pagination-custom .page-numbers span{
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 26px;
+    text-align: center;
+    color: #555;
+    padding: 7px 15px;
+    width: 40px;
+    height: 40px;
+}
+.pagination-custom .page-numbers .current{
+    background: #C19D68;
+    color: #FFFFFF;
+    border-radius: 8px;
+}
+

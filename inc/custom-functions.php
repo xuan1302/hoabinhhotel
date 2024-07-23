@@ -17,6 +17,7 @@ function xxx_scripts() {
     wp_enqueue_style('style-css' , THEME_URL . 'asset/css/style.css');
     wp_enqueue_style('aboutus-css' , THEME_URL . 'asset/css/aboutus.css');
     wp_enqueue_style('service-css' , THEME_URL . 'asset/css/service.css');
+    wp_enqueue_style('custom-css' , THEME_URL . 'asset/css/custom.css');
 
     wp_enqueue_script( 'boostrap-js', get_template_directory_uri() . '/asset/js/bootstrap.min.js', array( ), THEME_VERSION, true );
     wp_enqueue_script( 'swiper-js', get_template_directory_uri() . '/asset/js/swiper-bundle.min.js', array( ), THEME_VERSION, true );
@@ -156,9 +157,6 @@ if ( !function_exists( 'related_posts' ) ){
             );
         }
         $related_post = new wp_query($args);
-        echo "<pre>";
-        print_r($related_post);
-        echo "</pre>";
         if( $related_post->have_posts() ){
             ?>
             <div class="show-related container">
