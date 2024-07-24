@@ -159,13 +159,13 @@ if ( !function_exists( 'related_posts' ) ){
         $related_post = new wp_query($args);
         if( $related_post->have_posts() ){
             ?>
-            <div class="show-related container">
+            <div class="show-related container-fluid">
                 <div class="related-title-block">
-                    <h3 class="related-title">
+                    <div class="related-title">
                         <?php
                         the_category(', ');
                         ?>
-                    </h3>
+                    </div>
                     <?php $posttype = get_post_type();
                     if ( $posttype == 'post' ) {
                         global $post;
@@ -173,9 +173,10 @@ if ( !function_exists( 'related_posts' ) ){
                         $category_link = get_category_link( $categories[0] );
                         ?>
                         <div class="show-all">
-                            <a href="<?php echo esc_url( $category_link ); ?>" title="Category Name">Xem thêm bài viết<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.77 6C5.77 5.58579 6.10579 5.25 6.52 5.25H19C19.4142 5.25 19.75 5.58579 19.75 6V18.48C19.75 18.8942 19.4142 19.23 19 19.23C18.5858 19.23 18.25 18.8942 18.25 18.48V7.81066L6.53033 19.5303C6.23744 19.8232 5.76256 19.8232 5.46967 19.5303C5.17678 19.2374 5.17678 18.7626 5.46967 18.4697L17.1893 6.75H6.52C6.10579 6.75 5.77 6.41421 5.77 6Z" fill="#324894"/>
-                                </svg>
+                            <a href="<?php echo esc_url( $category_link ); ?>" title="Category Name">Xem thêm bài viết
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+									<path d="M13.3333 5L20 12M20 12L13.3333 19M20 12L4 12" stroke="#002D4A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
                             </a>
                         </div>
 
@@ -189,17 +190,21 @@ if ( !function_exists( 'related_posts' ) ){
                         global $post;
                         ?>
                         <article class="col-lg-4 col-md-6 col-12 item swiper-slide " id="post-<?php esc_attr(the_ID()); ?>" <?php post_class(); ?>>
-                            <?php if (has_post_thumbnail()) : ?>
                                 <div class="entry-image">
-                                    <div class="post-thumbnail">
-                                        <a href="<?php the_permalink() ?>" class="cct-image-wrapper">
-                                            <img src="<?php echo $url_thumbnail ?>" alt="<?php the_title(); ?>"/>
-                                        </a>
-                                    </div>
+                                    <?php if ($url_thumbnail) : ?>
+                                        <div class="post-thumbnail">
+                                            <a href="<?php the_permalink() ?>" class="cct-image-wrapper">
+                                                <img src="<?php echo $url_thumbnail ?>" alt="<?php the_title(); ?>"/>
+                                            </a>
+                                        </div>
+                                    <?php endif; ?>
                                     <div class="inner">
                                         <div class="entry-title">
                                             <h1><?php echo the_title(); ?></h1>
                                         </div>
+                                        <div class="entry-summary">
+								            <?php the_excerpt(); ?>
+							            </div>
                                         <div class="readmore-block">
                                             <a href="<?php echo esc_url(get_the_permalink($post->ID)); ?>" class="entry-readmore">
                                                 <?php echo esc_html__('đọc thêm', 'cct'); ?>
@@ -208,7 +213,6 @@ if ( !function_exists( 'related_posts' ) ){
                                         </div>
                                     </div>
                                 </div>
-                            <?php endif; ?>
                         </article>
                     <?php } ?>
                     </div>

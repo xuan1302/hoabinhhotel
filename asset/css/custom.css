@@ -72,4 +72,88 @@
     color: #FFFFFF;
     border-radius: 8px;
 }
-
+.single-page{
+    background: #F5F5F5;
+}
+.content-single-page{
+    padding: 64px 277px;
+    text-align: center;
+}
+.content-single-page .category-name a{
+    font-family: "Great Vibes", cursive;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 40px;
+    color: #7E522B;
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
+    margin-bottom: 8px;
+}
+.content-single-page .single-title h1{
+    font-family: "Red Rose", serif;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 48px;
+    color: #002D4A;
+    margin-bottom: 8px;
+}
+.content-single-page .date p{
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    color: #353535;
+    margin-bottom: 0;
+}
+.content-single-page .inner-content p{
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #667085;
+}
+.content-single-page .inner-content h1, .content-single-page .inner-content h2{
+    font-family: "Red Rose", serif;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 36px;
+    text-align: left;
+    color: #101828;
+}
+.related-post{
+    padding: 64px 57px; 
+}
+.related-post .related-title-block{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    margin-bottom: 40px;
+}
+.related-title-block .related-title a{
+    font-family: "Red Rose", serif;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 48px;
+    text-align: left;
+    color: #002D4A;
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
+}
+.related-title-block .show-all a{
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 16px;
+    color: #002D4A;
+}
+.related-post .entry-title h1{
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+    text-align: left;
+    color: #343434;
+}
