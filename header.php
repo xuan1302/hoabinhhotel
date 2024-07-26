@@ -21,81 +21,97 @@
 </head>
 
 <body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
+<?php wp_body_open();
+$logo = get_field('logo', 'option');
+$address_topbar = get_field('address_topbar', 'option');
+$link_map = get_field('link_map', 'option');
+$hotline_topbar = get_field('hotline_topbar', 'option');
+$link_facebook = get_field('link_facebook', 'option');
+$name_facebook = get_field('name_facebook', 'option');
+?>
+
 <div id="page" class="site">
+    <div class="menu-responsive">
+        <div class="icon-close-res-menu">
+            <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-close-w.png" alt="">
+        </div>
+
+        <div class="content-menu-mobile">
+            <nav id="site-navigation-mobile" class="main-navigation-mobile">
+                <?php
+                wp_nav_menu(
+                    array(
+                        'theme_location' => 'menu-mobile',
+                        'menu_id'        => 'menu-mobile',
+                    )
+                );
+                ?>
+            </nav>
+        </div>
+    </div>
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'anonymous' ); ?></a>
     <div id="topbar">
-        <div class="container-fluid">
+        <div class="custom-container">
             <div class="content-topbar">
                 <div class="left-topbar">
                     <div class="item item-address">
-                            <span class="icon">
-                                <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon_map.png" alt="">
-                            </span>
-                        <span>Số 279, khối Hòa Bắc, thị trấn Thạch Giám, Tương Dương, Nghệ An</span>
+                        <span class="icon">
+                            <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon_map.png" alt="">
+                        </span>
+                        <span><?php echo $address_topbar; ?></span>
                     </div>
                     <div class="item item-map">
-                        <a href="" target="_blank" class="item">
-                                <span class="icon">
-                                    <img src="<?php bloginfo('template_url'); ?>/asset/icons/map-02.png" alt="">
-                                </span>
+                        <a href="<?php echo $link_map; ?>" target="_blank" class="item">
+                            <span class="icon">
+                                <img src="<?php bloginfo('template_url'); ?>/asset/icons/map-02.png" alt="">
+                            </span>
                             <span>Bản đồ chỉ dẫn</span>
                         </a>
                     </div>
                 </div>
                 <div class="right-topbar">
                     <div class="item item-hotline">
-                        <a href="tel:02383746888" class="item">
-                                <span class="icon">
-                                    <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-phone.png" alt="">
-                                </span>
-                            <span>HOTLINE ĐẶT PHÒNG 0238 3746 888</span>
+                        <a href="tel:<?php echo $hotline_topbar; ?>" class="item">
+                            <span class="icon">
+                                <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-phone.png" alt="">
+                            </span>
+                            <span>HOTLINE ĐẶT PHÒNG <?php echo $hotline_topbar; ?></span>
                         </a>
                     </div>
                     <div class="item item-fb">
-                        <a href="#" target="_blank" class="item">
-                                <span class="icon">
-                                    <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-fb.png" alt="">
-                                </span>
-                            <span>Hoa Binh Hotel</span>
+                        <a href="<?php echo $hotline_topbar; ?>" target="_blank" class="item">
+                            <span class="icon">
+                                <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-fb.png" alt="">
+                            </span>
+                            <span><?php echo $name_facebook; ?></span>
                         </a>
                     </div>
                 </div>
             </div>
-        </div>
+</div>
     </div>
 	<header id="masthead" class="site-header">
-        <div id="head-main">
+        <div id="head-main" class="custom-container">
             <div class="left-menu">
                 <nav id="site-navigation-left" class="main-navigation">
                     <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'anonymous' ); ?></button>
                     <?php
                     wp_nav_menu(
                         array(
-                            'theme_location' => 'menu-1',
-                            'menu_id'        => 'primary-menu',
+                            'theme_location' => 'menu-main-left',
+                            'menu_id'        => 'menu-main-left',
                         )
                     );
                     ?>
                 </nav>
             </div>
             <div class="site-branding">
-                <?php
-                the_custom_logo();
-                if ( is_front_page() && is_home() ) :
-                    ?>
-                    <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-                <?php
-                else :
-                    ?>
-                    <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-                <?php
-                endif;
-                $anonymous_description = get_bloginfo( 'description', 'display' );
-                if ( $anonymous_description || is_customize_preview() ) :
-                    ?>
-                    <p class="site-description"><?php echo $anonymous_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-                <?php endif; ?>
+                <h1 class="site-title">
+                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                        <img src="<?php echo $logo['url']; ?>" alt="">
+                        <?php bloginfo( 'name' ); ?>
+                    </a>
+                </h1>
             </div>
             <div class="right-menu">
                 <nav id="site-navigation-right" class="main-navigation">
@@ -103,14 +119,15 @@
                     <?php
                     wp_nav_menu(
                         array(
-                            'theme_location' => 'menu-1',
-                            'menu_id'        => 'primary-menu',
+                            'theme_location' => 'menu-main-right',
+                            'menu_id'        => 'menu-main-right',
                         )
                     );
                     ?>
                 </nav>
             </div>
+            <div class="icon-menu-mobile">
+                <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-menu-mobile.png" alt="">
+            </div>
         </div>
-
-
 	</header><!-- #masthead -->

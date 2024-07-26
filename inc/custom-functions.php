@@ -15,6 +15,7 @@ function xxx_scripts() {
     wp_enqueue_style('swiper-css' , THEME_URL . 'asset/css/swiper.min.css');
     wp_enqueue_style('daterangepicker-css' , THEME_URL . 'asset/css/daterangepicker.css');
     wp_enqueue_style('style-css' , THEME_URL . 'asset/css/style.css');
+    wp_enqueue_style('responsive-css' , THEME_URL . 'asset/css/responsive.css');
 
     wp_enqueue_script( 'boostrap-js', get_template_directory_uri() . '/asset/js/bootstrap.min.js', array( ), THEME_VERSION, true );
     wp_enqueue_script( 'swiper-js', get_template_directory_uri() . '/asset/js/swiper-bundle.min.js', array( ), THEME_VERSION, true );
@@ -141,3 +142,8 @@ function create_custom_table_on_theme_activation() {
     create_orders_hotel_rooms_table();
 }
 add_action('after_setup_theme', 'create_custom_table_on_theme_activation');
+
+function custom_image_sizes() {
+    add_image_size( 'blog-thumbnail', 416,280, true );
+}
+add_action('after_setup_theme', 'custom_image_sizes');
