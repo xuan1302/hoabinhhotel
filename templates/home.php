@@ -8,6 +8,7 @@ $images_hotel = get_field( "images_hotel" );
 $bg_service = get_field( "backgound_service" );
 $bg_abous = get_field( "backgound_abous" );
 $link_all_post = get_field( "link_all_post" );
+$shortcode_review = get_field( "shortcode_review" );
 
 $args_system_room = array(
     'post_type' => 'rooms',
@@ -32,12 +33,12 @@ $myposts_experience = get_posts( $args_experience );
                             <?php
                                 foreach ($home_slide as $value) { ?>
                                     <div class="swiper-slide item-slide">
-                                        <img src="<?php echo $value['image']['url']; ?>" alt="">
+                                        <div class="img-slider-bg" style="background-image: url(<?php echo $value['image']['url']; ?>)"></div>
                                         <div class="content-slide-home">
                                             <div class="container text-center">
                                                 <h4 class="sub-title"><?php echo $value['sub_title']; ?></h4>
                                                 <h3 class="title"><?php echo $value['title']; ?></h3>
-                                                <a href="<?php echo $value['link']; ?>" class="system-hotel-link">Hệ thống phòng nghỉ</a>
+                                                <a href="<?php echo $value['link']; ?>" class="system-hotel-link">Các hạng phòng</a>
                                             </div>
                                         </div>
                                     </div>
@@ -149,23 +150,31 @@ $myposts_experience = get_posts( $args_experience );
                 </div>
             <?php }
 
-            if($images_hotel){ ?>
-                <div id="list-img-hotel">
-                    <h3 class="title">Hình ảnh khách sạn</h3>
-                    <div class="swiper mySwiper">
-                        <div class="swiper-wrapper">
-                            <?php
-                                foreach ($images_hotel as $item) { ?>
-                                    <div class="swiper-slide">
-                                        <img src="<?php echo $item['thumbnail']['url']; ?>" alt="">
-                                    </div>
-                                <?php }
-                            ?>
-                        </div>
-                        <div class="swiper-pagination-img-hotel"></div>
+            if($shortcode_review){ ?>
+                <div class="home-review">
+                    <div class="custom-container">
+                        <?php echo do_shortcode($shortcode_review); ?>
                     </div>
                 </div>
             <?php }
+
+            if($images_hotel){ ?>
+                    <div id="list-img-hotel">
+                        <h3 class="title">Hình ảnh khách sạn</h3>
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <?php
+                                    foreach ($images_hotel as $item) { ?>
+                                        <div class="swiper-slide">
+                                            <img src="<?php echo $item['thumbnail']['url']; ?>" alt="">
+                                        </div>
+                                    <?php }
+                                ?>
+                            </div>
+                            <div class="swiper-pagination-img-hotel"></div>
+                        </div>
+                    </div>
+                <?php }
 
             if($myposts_experience) { ?>
                 <div class="posts-experience">
@@ -174,7 +183,7 @@ $myposts_experience = get_posts( $args_experience );
                             <h3>Tin tức & Trải nghiệm</h3>
                             <a href="<?php echo $link_all_post; ?>" class="action-arrow-right-blue">Xem tất cả bài viết</a>
                         </div>
-                        <div class="list-post">
+                        <div class="list-post hide-mobile">
                             <div class="row">
                                 <?php
                                     foreach ($myposts_experience as $item) { ?>
@@ -197,6 +206,35 @@ $myposts_experience = get_posts( $args_experience );
                                     <?php }
                                 ?>
                             </div>
+                        </div>
+                        <div class="list-post-mobile">
+                            <div class="swiper post-list-mobile">
+                                <div class="swiper-wrapper list-post">
+                                    <?php
+                                    foreach ($myposts_experience as $item) { ?>
+                                        <div class="item swiper-slide">
+                                            <div class="img">
+                                                <a href="<?php echo get_permalink($item->ID); ?>">
+                                                    <?php
+                                                    echo get_the_post_thumbnail($item->ID,'blog-thumbnail');
+                                                    ?>
+                                                </a>
+                                            </div>
+                                            <div class="content">
+                                                <a href="<?php echo get_permalink($item->ID); ?>">
+                                                    <h4 class="title-post"><?php echo get_the_title($item->ID); ?></h4>
+                                                </a>
+                                                <div class="description"><?php echo wp_trim_words(get_post_field('post_content', $item->ID), 20, '...'); ?></div>
+                                                <a href="<?php echo get_permalink($item->ID); ?>" class="action-arrow-right-blue">Xem thêm</a>
+                                            </div>
+                                        </div>
+                                    <?php }
+                                    ?>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="link-all-mobile text-center">
+                            <a href="<?php echo $link_all_post; ?>" class="action-arrow-right-blue">Xem tất cả bài viết</a>
                         </div>
                     </div>
                 </div>

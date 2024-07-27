@@ -33,7 +33,7 @@ $name_facebook = get_field('name_facebook', 'option');
 <div id="page" class="site">
     <div class="menu-responsive">
         <div class="icon-close-res-menu">
-            <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-close-w.png" alt="">
+            <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-slose-black.png" alt="">
         </div>
 
         <div class="content-menu-mobile">

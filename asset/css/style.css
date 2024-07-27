@@ -88,7 +88,7 @@ a:visited {
 }
 #masthead{
      position: absolute;
-     top: 76px;
+     top: 45px;
     z-index: 9;
     width: 100%;
 }
@@ -212,6 +212,7 @@ h1.site-title{
     font-size: 24px;
     text-transform: uppercase;
     font-weight: 700;
+    margin: 0;
 }
 #menu-main-right li:last-child a{
     border: 1px solid #fff;
@@ -728,6 +729,15 @@ a.action-arrow-right-blue{
 .item-slide{
     position: relative;
 }
+.item-slide:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #33333361;
+    top: 0;
+    left: 0;
+}
 .item-slide .content-slide-home{
     position: absolute;
     left: 0;
@@ -736,6 +746,7 @@ a.action-arrow-right-blue{
     height: 100%;
     display: flex;
     align-items: center;
+    z-index: 9;
 }
 .content-slide-home .sub-title{
     font-family: "Great Vibes", cursive;
@@ -792,7 +803,7 @@ a.action-arrow-right-blue{
     cursor: pointer;
 }
 .menu-responsive {
-    background: #002D4A;
+    background: #fff;
     right: -400px;
     height: 100%;
     position: fixed;
@@ -822,10 +833,12 @@ a.action-arrow-right-blue{
 }
 .main-navigation-mobile ul > li a{
     text-transform: uppercase;
-    color: #fff;
+    color: #353535;
+    font-weight: 600;
 }
 .main-navigation-mobile ul > li{
     margin-bottom: 40px;
+    position: relative;
 }
 .main-navigation-mobile ul > li:last-child{
     margin-bottom: 0;
@@ -852,28 +865,33 @@ a.action-arrow-right-blue{
     top: 0;
     width: 24px;
     height: 24px;
-    background-image: url("../icons/icon-bed-white.png");
+    background-image: url("../icons/icon-bed.png");
     background-repeat: no-repeat;
 }
 .main-navigation-mobile ul.menu ul.sub-menu > li:nth-child(2) a:after{
-    background-image: url("../icons/icon-room-2-1-white.png");
+    background-image: url("../icons/icon-room-2-1-black.png");
 }
 .main-navigation-mobile ul.menu ul.sub-menu > li:nth-child(3) a:after{
-    background-image: url("../icons/icon-room-2-2-white.png");
+    background-image: url("../icons/icon-room-2-2-black.png");
 }
 .main-navigation-mobile ul.menu ul.sub-menu > li:nth-child(4) a:after{
-    background-image: url("../icons/icon-room-3-1-white.png");
+    background-image: url("../icons/icon-room-3-black.png");
+}
+.main-navigation-mobile ul.menu ul.sub-menu > li:nth-child(4) a:after{
+    background-image: url("../icons/icon-room-vip-black.png");
 }
 #menu-mobile > li:last-child{
     display: block;
     padding: 12px 24px;
     border-radius: 4px;
-    border: 1px solid #fff;
     text-align: center;
+    background-color: #C19D68;
 }
 #menu-mobile > li:last-child a{
     display: block;
     position: relative;
+    color: #fff;
+    text-transform: uppercase;
 }
 #menu-mobile > li:last-child a:after{
     content: '';
@@ -884,4 +902,40 @@ a.action-arrow-right-blue{
     top: 1px;
     background-image: url("../icons/icon-booking.png");
     background-repeat: no-repeat;
+}
+.post-list-mobile .swiper-slide {
+    width: 80%;
+}
+.link-all-mobile{
+    margin-top: 38px;
+}
+.list-post-mobile, .link-all-mobile{
+    display: none;
+}
+.img-slider-bg{
+    min-height: 780px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.icon-menu-toggle{
+    position: absolute;
+    top: 8px;
+    right: 125px;
+    width: 10px;
+    height: 6px;
+    background-image: url("../icons/icon-arrow-bt.png");
+    background-repeat: no-repeat;
+}
+.main-navigation-mobile ul > li.active ul.sub-menu{
+    height: 0;
+    transition: 0.3s all;
+    opacity: 0;
+    visibility: hidden;
+    padding: 0;
+}
+.home-review{
+    padding: 64px 0 0 0;
+}
+#list-img-hotel .swiper-wrapper .swiper-slide img{
+    width: 100%;
 }

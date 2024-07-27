@@ -67,8 +67,27 @@
     }
   })
   if(jQuery(window).width() < 767) {
-
+    var swiper_post_mobile = new Swiper(".post-list-mobile", {
+      slidesPerView: "auto",
+      spaceBetween: 20,
+      loop: true,
+      autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        // el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
   }
-
+  $(".menu-responsive").click(function (e) {
+    e.stopPropagation();
+  })
+  var $targetDiv = $('#menu-mobile > li.menu-item-has-children');
+  $targetDiv.append('<div class="icon-menu-toggle"></div>');
+  $('.icon-menu-toggle').click(function (){
+    $(this).parent('li.menu-item-has-children').toggleClass('active')
+  });
 
 }(jQuery));
