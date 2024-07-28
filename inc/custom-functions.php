@@ -23,6 +23,7 @@ function xxx_scripts() {
     wp_enqueue_script( 'daterange-js', get_template_directory_uri() . '/asset/js/daterangepicker.js', array( ), THEME_VERSION, true );
     wp_enqueue_script( 'custom-js', get_template_directory_uri() . '/asset/js/custom.js', array( ), THEME_VERSION, true );
         wp_enqueue_script( 'common-js', get_template_directory_uri() . '/asset/js/common.js', array( ), THEME_VERSION, true );
+        wp_enqueue_script( 'booking-js', get_template_directory_uri() . '/asset/js/booking.js', array( ), THEME_VERSION, true );
 }
 add_action( 'wp_enqueue_scripts', 'xxx_scripts',10 );
 
@@ -147,3 +148,28 @@ function custom_image_sizes() {
     add_image_size( 'blog-thumbnail', 416,280, true );
 }
 add_action('after_setup_theme', 'custom_image_sizes');
+
+function handle_my_custom_form_action() {
+    if (isset($_POST['range_date'])) {
+        $range_date = sanitize_text_field($_POST['range_date']);
+        $redirect_url = add_query_arg(array(
+            'range_date' => rawurlencode($range_date),
+        ), home_url('/booking/'));
+        wp_safe_redirect($redirect_url);
+        exit;
+    }
+}
+add_action('admin_post_my_custom_form_action', 'handle_my_custom_form_action');
+add_action('admin_post_nopriv_my_custom_form_action', 'handle_my_custom_form_action');
+
+function handle_form_submit_checkout() {
+    $redirect_url = add_query_arg(array(
+//        'range_date' => rawurlencode($range_date),
+        'range_date' => '123',
+    ), home_url('/checkout-booking/'));
+    wp_safe_redirect($redirect_url);
+    exit;
+}
+add_action('admin_post_handle_form_submit_checkout', 'handle_form_submit_checkout');
+add_action('admin_post_nopriv_handle_form_submit_checkout', 'handle_form_submit_checkout');
+
