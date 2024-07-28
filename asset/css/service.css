@@ -1,0 +1,26 @@
+.template-service .organizing-wedding{
+    padding: 64px 57px;
+    background: #F5F5F5;
+}
+.template-service .organizing-wedding .inner{
+    padding-right: 63px;
+}
+.template-service .inner{
+    padding: 67px 0;
+}
+.template-service .top-contain{
+    padding-bottom: 40px;
+}
+.template-service .conference-organization{
+    padding: 64px 57px;
+}
+.conference-organization .inner{
+    padding-left: 64px;
+}
+.template-service .entertainment-service{
+    padding: 64px 57px;
+    background: #F5F5F5;
+}
+.entertainment-service .inner{
+    padding-right: 63px;
+}

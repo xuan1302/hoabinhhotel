@@ -1,0 +1,180 @@
+.archive-contain .content{
+   padding: 64px 57px; 
+}
+.archive-contain .entry-title h1{
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+    color: #353535;
+    margin-bottom: 8px;
+}
+.archive-contain .post-thumbnail{
+    height: 271px;
+}
+.archive-contain .entry-summary{
+    margin-top: 0;
+}
+.archive-contain{
+    background: #F5F5F5;
+}
+.archive-contain .entry-summary p{
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #555555;
+    margin-bottom: 16px;
+}
+.archive-contain .post-thumbnail img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.archive-contain .inner{
+    text-align: left;
+    padding: 24px;
+    background: #FFF;
+    min-height: 208px;
+}
+.archive-contain .readmore-block a{
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 16px;
+    color: #00434F;
+    text-transform: uppercase;
+}
+.archive-contain .pagination-custom{
+    margin-top: 40px;
+    padding-top: 20px;
+}
+.pagination-custom .page-numbers{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+.pagination-custom .page-numbers a, .pagination-custom .page-numbers span{
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 26px;
+    text-align: center;
+    color: #555;
+    padding: 7px 15px;
+    width: 40px;
+    height: 40px;
+}
+.pagination-custom .page-numbers .current{
+    background: #C19D68;
+    color: #FFFFFF;
+    border-radius: 8px;
+}
+.single-page{
+    background: #F5F5F5;
+}
+.content-single-page{
+    padding: 64px 277px;
+    text-align: center;
+}
+.content-single-page .category-name a{
+    font-family: "Great Vibes", cursive;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 40px;
+    color: #7E522B;
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
+    margin-bottom: 8px;
+}
+.content-single-page .single-title h1{
+    font-family: "Red Rose", serif;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 48px;
+    color: #002D4A;
+    margin-bottom: 8px;
+}
+.content-single-page .date p{
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    color: #353535;
+    margin-bottom: 0;
+}
+.content-single-page .inner-content p{
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #667085;
+}
+.content-single-page .inner-content h1, .content-single-page .inner-content h2{
+    font-family: "Red Rose", serif;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 36px;
+    text-align: left;
+    color: #101828;
+}
+.related-post{
+    padding: 64px 57px; 
+}
+.related-post .related-title-block{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    margin-bottom: 40px;
+}
+.related-title-block .related-title a{
+    font-family: "Red Rose", serif;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 48px;
+    text-align: left;
+    color: #002D4A;
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
+}
+.related-title-block .show-all a{
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 16px;
+    color: #002D4A;
+}
+.related-post .entry-title h1{
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+    text-align: left;
+    color: #343434;
+}
+.single-banner{
+    min-height: 480px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.system-room-container{
+    padding: 64px 57px;
+}
+.system-room-container .swiper {
+    width: 100%;
+    height: 100%;
+}
+.system-room-container .swiper-slide{
+    width: 30% !important;
+ }
+.system-room-container .swiper-slide .thumbnail img{
+    display: block;
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
