@@ -178,3 +178,36 @@
     height: 280px;
     object-fit: cover;
 }
+.inner .title{
+    font-family: "Great Vibes", cursive;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 40px;
+    color: #7E522B;
+    margin-bottom: 8px;
+  }
+  .inner .main-title{
+      font-family: "Red Rose", serif;
+      font-size: 40px;
+      font-weight: 500;
+      line-height: 48px;
+      color: #002D4A;
+      margin-bottom: 24px;
+  }
+  .inner .description{
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #353535;
+    margin-bottom: 40px;
+  }
+  .inner .btn-contact{
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 16px;
+    color: #FFFFFF;
+    background: #C19D68;
+    padding: 16px 24px;
+  }
