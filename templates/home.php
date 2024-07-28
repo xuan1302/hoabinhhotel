@@ -48,9 +48,20 @@ $myposts_experience = get_posts( $args_experience );
                         <div class="swiper-pagination-slide-home"></div>
                     </div>
                 </div>
-            <?php }
-
-
+            <?php } ?>
+            <div class="form-booking-home">
+                <div class="container">
+                    <div class="content-form-booking">
+                        <form action="<?php echo esc_url(admin_url('admin-post.php')); ?>" method="post">
+                            <input type="hidden" name="action" value="my_custom_form_action">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="range_date" required>
+                            <input type="submit" value="Submit">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <?php
             if($abous) { ?>
                 <div class="about-us-home" style="background-image: url(<?php echo $bg_abous['url']; ?>);">
                     <div class="container">
