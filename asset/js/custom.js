@@ -76,13 +76,24 @@
   //   //   clickable: true,
   //   // },
   // });
-  var swiper = new Swiper(".slide-list-image", {
+  var slide_image = new Swiper(".slide-list-image", {
     slidesPerView: 2,
     spaceBetween: 8,
     loop:true,
     centeredSlides: true,
     pagination: {
       el: ".image-pagination",
+      clickable: true,
+    },
+  });
+
+  var slide_room = new Swiper(".list-system-rooms", {
+    slidesPerView: 3,
+    centeredSlides: true,
+    spaceBetween: 24,
+    loop:true,
+    pagination: {
+      el: ".room-pagination",
       clickable: true,
     },
   });

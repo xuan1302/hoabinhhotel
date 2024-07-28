@@ -157,3 +157,24 @@
     text-align: left;
     color: #343434;
 }
+.single-banner{
+    min-height: 480px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.system-room-container{
+    padding: 64px 57px;
+}
+.system-room-container .swiper {
+    width: 100%;
+    height: 100%;
+}
+.system-room-container .swiper-slide{
+    width: 30% !important;
+ }
+.system-room-container .swiper-slide .thumbnail img{
+    display: block;
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
