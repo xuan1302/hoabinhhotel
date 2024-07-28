@@ -75,6 +75,9 @@
     .left-topbar{
         padding-right: 50px;
     }
+    .img-slider-bg{
+        min-height: 600px;
+    }
 }
 @media only screen and (max-width: 991px) {
     .about-us-home .content .right-col h5, .about-us-home .content .right-col h4{
@@ -117,6 +120,9 @@
     .icon-menu-mobile{
         display: block;
     }
+    /*#masthead{*/
+    /*    top: 45px;*/
+    /*}*/
 }
 @media only screen and (max-width: 800px) {
     .about-us-home .right-col{
@@ -126,7 +132,7 @@
         padding: 15px;
     }
     .custom-container{
-        padding: 0 15px;
+        padding: 0 20px;
     }
 }
 
@@ -147,6 +153,18 @@
         flex-direction: column;
         gap: 32px;
     }
+    .posts-experience .title h3{
+        font-size: 38px;
+        line-height: 46px;
+        width: 100%;
+        text-align: center;
+    }
+    .posts-experience .title .action-arrow-right-blue{
+        display: none;
+    }
+    .img-slider-bg{
+        min-height: 596px;
+    }
 }
 @media only screen and (max-width: 575px) {
 
@@ -156,7 +174,61 @@
 }
 
 @media only screen and (max-width: 500px) {
-
+    .about-us-home .content .right-col h4{
+        font-size: 40px;
+        line-height: 40px;
+    }
+    .about-us-home .content .right-col h5{
+        font-size: 38px;
+        line-height: 46px;
+    }
+    .system-room .title{
+        font-size: 38px;
+        line-height: 46px;
+        margin-bottom: 32px;
+    }
+    .list-post-system .item .content .title-post{
+        font-size: 28px;
+    }
+    .link-to-room a{
+        font-size: 16px;
+    }
+    .service .title{
+        font-size: 38px;
+    }
+    .list-service .item .right-service {
+        width: 90%;
+    }
+    .list-service .item:nth-child(even) .img-service {
+        order: 1;
+    }
+    .left-ft-top{
+        font-size: 38px;
+        line-height: 46px;
+    }
+    /*.template-home-custom .posts-experience .list-post{*/
+    /*    display: none;*/
+    /*}*/
+    .list-post-mobile, .link-all-mobile{
+        display: block;
+    }
+    /*.template-home-custom .posts-experience .list-post-mobile .list-post{*/
+    /*    display: block;*/
+    /*}*/
+    .home .hide-mobile{
+        display: none;
+    }
+    .list-post-mobile .post-list-mobile .item{
+        padding: 0;
+    }
+    .content-slide-home .sub-title{
+        font-size: 40px;
+        line-height: 40px;
+    }
+    .content-slide-home .title{
+        font-size: 42px;
+        line-height: 52px;
+    }
 }
 @media only screen and (max-width: 480px) {
 
