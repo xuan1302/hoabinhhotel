@@ -87,6 +87,17 @@
     },
   });
 
+  var slide_image_room = new Swiper(".list-image-room", {
+    slidesPerView: 2,
+    spaceBetween: 8,
+    loop:true,
+    centeredSlides: true,
+    pagination: {
+      el: ".image-room-pagination",
+      clickable: true,
+    },
+  });
+
   var slide_room = new Swiper(".list-system-rooms", {
     slidesPerView: 3,
     centeredSlides: true,

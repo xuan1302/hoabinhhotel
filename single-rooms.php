@@ -33,6 +33,7 @@ $args_system_room = array(
     'post_status' => 'publish',
 );
 $myposts_system_room = get_posts($args_system_room);
+$list_image_room = get_field( "image_room" );
 ?>
 
     <main id="primary" class="site-main single-room-page">
@@ -74,6 +75,24 @@ $myposts_system_room = get_posts($args_system_room);
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="section-list-image-room">
+                    <div class="list-image-room swiper">
+                        <div class="swiper-wrapper">
+                            <?php
+                            if($list_image_room){
+                                foreach($list_image_room as $item){
+                                    ?>
+                                    <div class="swiper-slide">
+                                        <img class="image" src="<?php echo $item['img']['url']?>" />
+                                    </div>
+                                    <?php
+                                }
+                            }
+                            ?>
+                        </div>
+                    </div>
+                    <div class="image-room-pagination"></div>
                 </div>
                 <div class="utilities-contain">
                     <div class="section-utilities container">
@@ -236,7 +255,7 @@ $myposts_system_room = get_posts($args_system_room);
                 if($myposts_system_room) { ?>
                     <div class="section-system-room">
                         <div class="system-room-container">
-                            <h3 class="title">Hệ thông phòng nghỉ</h3>
+                            <h3 class="title">Hệ thống phòng nghỉ</h3>
                             <div class="list-system-rooms swiper">
                                 <div class="swiper-wrapper">
                                     <?php
@@ -305,7 +324,7 @@ $myposts_system_room = get_posts($args_system_room);
                                                 </div>
                                                 <div class="link-to-room">
                                                     <a href="<?php echo get_permalink($item->ID); ?>">Chi tiết phòng</a>
-                                                    <a href="<?php echo get_permalink($item->ID); ?>" class="">Đặt phòng <img src="<?php bloginfo('template_url'); ?>/asset/icons/arrow-right-black.png" alt=""></a>
+                                                    <a href="<?php echo get_permalink($item->ID); ?>" class="booking-link">ĐẶT PHÒNG NÀY <img src="<?php bloginfo('template_url'); ?>/asset/icons/arrow-right-black.png" alt=""></a>
                                                 </div>
                                             </div>
                                         </div>

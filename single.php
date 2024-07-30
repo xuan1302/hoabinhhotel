@@ -10,8 +10,7 @@ if (!defined('ABSPATH')) {
     return;
 }
 get_header();
-$description = get_field("description");
-$banner = get_field("banner")
+$description = get_field("des");
 ?>
 
     <main id="primary" class="site-main single-page container-fluid">
@@ -31,6 +30,9 @@ $banner = get_field("banner")
                             <p><?php echo get_the_date( 'd-m-Y' ); ?>
                             <span>- by Hoa Binh Hotel</span></p>
                         </div>
+                    </div>
+                    <div class="description-single">
+                        <p><?php echo $description ?></p>
                     </div>
                     <div class="inner-content">
                         <?php

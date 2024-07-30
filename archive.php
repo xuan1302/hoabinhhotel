@@ -8,6 +8,9 @@
  */
 
 get_header();
+$term = get_queried_object();
+$banner = get_field( "banner", $term);
+$des = get_field( "description", $term );
 ?>
 
 	<main id="primary" class="site-main ">
@@ -15,9 +18,18 @@ get_header();
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<?php
-				the_category('<h1 class="archive-title">', '</h1>' );
-				?>
+                <div class="single-banner" style="background-image: url(<?php echo $banner['url']; ?>)">
+                    <div class="banner-contain">
+                        <div class="category-name">
+                            <?php
+                            the_category(', ');
+                            ?>
+                        </div>
+                        <div class="single-des">
+                            <p><?php echo $des; ?></p>
+                        </div>
+                    </div>
+                </div>
 			</header><!-- .page-header -->
 			<div class="archive-contain container-fluid">
 				<div class="content">
