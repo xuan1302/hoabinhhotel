@@ -416,3 +416,44 @@
 .content-single-page .banner{
     margin-bottom: 40px;
 }
+@media only screen and (max-width: 768px) {
+    .single-banner .single-title h1{
+        font-size: 42px;
+        line-height: 52px;
+    }
+    .single-banner .banner-contain{
+        padding:168px 20px;
+    }
+    .inner .title{
+        font-size: 40px;
+        line-height: 40px;
+    }
+    .inner .main-title{
+        font-size: 38px;
+        line-height: 46px;
+    }
+    .inner .description{
+        font-size: 16px;
+        line-height: 26px;
+        margin-bottom: 24px;
+    }
+    .system-room-container{
+        padding: 56px 15px;
+    }
+    .list-system-rooms .room-wrapper{
+        flex-direction: column;
+    }
+    .section-system-room .system-room-container .title{
+        font-size: 38px;
+        line-height: 46px;
+        max-width: 289px;
+        margin: 0 auto;
+        margin-bottom: 32px;
+    }
+    .section-system-room .list-system-rooms .item{
+        margin-bottom: 48px;
+    }
+    .section-system-room .list-system-rooms .item:last-child{
+        margin-bottom: 0;
+    }
+}

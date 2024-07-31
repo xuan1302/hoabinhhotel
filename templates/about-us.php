@@ -106,10 +106,10 @@ $myposts_system_room = get_posts($args_system_room);
                 <div class="system-room-container">
                     <h3 class="title">Hệ thống phòng nghỉ</h3>
                     <div class="list-system-rooms swiper">
-                        <div class="swiper-wrapper">
+                        <div class="swiper-wrapper room-wrapper">
                             <?php
                             foreach ($myposts_system_room as $item) { ?>
-                                <div class="swiper-slide item">
+                                <div class="swiper-slide item item-room">
                                     <div class="img">
                                         <div class="thumbnail">
                                             <a href="<?php echo get_permalink($item->ID); ?>">
