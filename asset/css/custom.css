@@ -142,12 +142,13 @@
     cursor: default;
     text-decoration: none;
 }
-.related-title-block .show-all a{
+.show-all a{
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
     font-weight: 700;
     line-height: 16px;
     color: #002D4A;
+    text-transform: uppercase;
 }
 .related-post .entry-title h1{
     font-family: "Open Sans", sans-serif;
@@ -156,6 +157,7 @@
     line-height: 28px;
     text-align: left;
     color: #343434;
+    margin-bottom: 8px;
 }
 .single-banner{
     min-height: 480px;
@@ -169,12 +171,410 @@
     width: 100%;
     height: 100%;
 }
-.system-room-container .swiper-slide{
-    width: 30% !important;
- }
 .system-room-container .swiper-slide .thumbnail img{
     display: block;
     width: 100%;
     height: 280px;
     object-fit: cover;
+}
+.inner .title{
+    font-family: "Great Vibes", cursive;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 40px;
+    color: #7E522B;
+    margin-bottom: 8px;
+  }
+.inner .main-title{
+  font-family: "Red Rose", serif;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 48px;
+  color: #002D4A;
+  margin-bottom: 24px;
+}
+.inner .description{
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #353535;
+    margin-bottom: 40px;
+}
+.inner .btn-contact{
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 16px;
+    color: #FFFFFF;
+    background: #C19D68;
+    padding: 16px 24px;
+}
+.single-banner .banner-contain{
+  text-align: center;
+  padding: 190px 0;
+}
+.single-banner .single-title h1{
+    font-family: "Red Rose", serif;
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 74px;
+    text-align: center;
+    color: #FFF;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+.single-banner .single-des p{
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 26px;
+    color: #FFFFFF;
+}
+.single-room-page .section-content-room{
+    background: #FFF;
+}
+.single-room-page .section-content-room .contain{
+    padding: 64px 57px 40px 57px;
+    text-align: center;
+}
+.content-single-room .section-content h2{
+    font-family: "Red Rose", serif;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 48px;
+    color: #002D4A;
+}
+.content-single-room .section-content{
+    margin-bottom: 24px;
+    padding: 0 220px;
+}
+.content-single-room .section-content p{
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #353535;
+}
+.single-room-content .section-price h1{
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: center;
+    color: #353535;
+    margin-bottom: 0;
+}
+.single-room-content .section-price p{
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center;
+    color: #7E522B;
+    margin-bottom: 0;
+}
+.single-room-content .utilities-contain{
+    background: #F5F5F5;
+}
+.single-room-content .utilities-inner{
+    padding: 40px 127px;
+}
+.single-room-content .section-utilities h1{
+    font-family: "Red Rose", serif;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 48px;
+    text-align: center;
+    color: #002D4A;
+    margin-bottom: 40px;
+}
+.single-room-content .section-utilities .utilities{
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #353535;
+    margin-bottom: 16px;
+}
+.section-utilities .btn-book{
+    text-align: center;
+    margin-bottom: 24px;
+}
+.section-utilities .btn-book a{
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 16px;
+    text-align: left;
+    background: #C19D68;
+    padding: 16px 24px;
+    text-transform: uppercase;
+
+}
+.section-utilities .list-utilities{
+    margin-bottom: 80px;
+}
+.single-room-content  .section-rules-contain{
+    padding: 40px 57px;
+}
+.single-room-content  .section-rules-contain .contain{
+    border: 1px solid #DADADA;
+    padding: 40px 64px;
+    height: 294px;
+}
+.section-rules-contain .contain h1{
+    font-family: "Red Rose", serif;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 36px;
+    text-align: left;
+    color: #353535;
+
+}
+.section-rules-contain .contain ol{
+    padding: 0;
+    margin-left: 20px;
+    margin-bottom: 0;
+}
+.section-rules-contain .contain li{
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: left;
+    color: #353535;
+    margin-bottom: 8px;
+}
+.section-system-room .system-room-container .title{
+    font-family: "Red Rose", serif;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 48px;
+    text-align: center;
+    color: #002D4A;
+    margin-bottom: 40px;
+}
+.section-system-room .system-room-container .title-post{
+    font-family: "Red Rose", serif;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 36px;
+    text-align: left;
+    color: #121212;
+    margin-bottom: 6px;
+}
+.section-system-room .system-room-container .price{
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+    text-align: left;
+    color: #7E522B;
+    margin-bottom: 24px;
+}
+.section-system-room .system-room-container .utilities{
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left;
+    color: #555555;
+}
+.single-room-content .section-list-image-room{
+    padding-bottom: 64px;
+}
+.section-list-image-room .image-room-pagination{
+    text-align: center;
+    margin-top: 40px;
+}
+.section-list-image-room .image-room-pagination .swiper-pagination-bullet{
+    height: 10px;
+    width: 10px;
+    display: inline-block;
+    border-radius: 50%;
+    background: #DADADA;
+    margin: 0 5px;
+}
+.section-list-image-room .image-room-pagination .swiper-pagination-bullet-active{
+    background: #C19D68;
+}
+.list-system-rooms .link-to-room .booking-link:hover img{
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+}
+.banner-contain .category-name a{
+    font-family: "Red Rose", serif;
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 74px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.content-single-page .description-single p{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 26px;
+    color: #667085;
+}
+.content-single-page .banner{
+    margin-bottom: 40px;
+}
+.entry-image .post-thumbnail{
+    min-height: 271px;
+}
+.entry-image .post-thumbnail img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.readmore-block a{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 16px;
+    text-align: left;
+    color: #002D4A;
+
+}
+.related-post-content .entry-summary{
+    margin-top: 0;
+}
+.related-post-content .entry-summary p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: left;
+    color: #636363;
+
+}
+.show-all-mobile{
+    display: none;
+}
+.section-utilities .btn-book a:hover{
+    color: #FFF;
+}
+@media only screen and (max-width: 768px) {
+    .single-banner .single-title h1{
+        font-size: 42px;
+        line-height: 52px;
+    }
+    .single-banner .banner-contain{
+        padding:168px 20px;
+    }
+    .inner .title{
+        font-size: 40px;
+        line-height: 40px;
+    }
+    .inner .main-title{
+        font-size: 38px;
+        line-height: 46px;
+    }
+    .inner .description{
+        font-size: 16px;
+        line-height: 26px;
+        margin-bottom: 24px;
+    }
+    .system-room-container{
+        padding: 56px 15px 0;
+    }
+    .list-system-rooms .room-wrapper{
+        flex-direction: column;
+    }
+    .section-system-room .system-room-container .title{
+        font-size: 38px;
+        line-height: 46px;
+        max-width: 289px;
+        margin: 0 auto;
+        margin-bottom: 32px;
+    }
+    .section-system-room .list-system-rooms .item{
+        margin-bottom: 48px;
+    }
+    .section-system-room .list-system-rooms .item:last-child{
+        margin-bottom: 0;
+    }
+    .system-room-container .list-system-rooms .img{
+        margin-bottom: 16px;
+    }
+    .single-banner .category-name a {
+        font-size: 42px;
+        line-height: 52px;
+    }
+    .archive-contain .content{
+        padding: 56px 0;
+    }
+    .content-single-page{
+        padding: 56px 0;
+    }
+    .content-single-page .single-title h1{
+        font-size: 38px;
+        line-height: 46px;
+    }
+    .content-single-page .category-name a{
+        font-size: 40px;
+        line-height: 40px;
+    }
+    .related-post{
+        padding: 56px 0 0;
+    }
+    .show-all-mobile{
+        display: block;
+        text-align: center;
+        margin-top: 32px;
+    }
+    .related-title-block .show-all{
+        display: none;
+    }
+    .related-title-block .related-title{
+        text-align: center;
+    }
+    .related-title-block .related-title a{
+        font-size: 38px;
+        line-height: 46px;
+
+    }
+    .related-post .related-title-block{
+        margin-bottom: 32px;
+    }
+    .related-post-content .item {
+        width: 80%;
+        max-width: 80%;
+    }
+    .entry-image .post-thumbnail{
+        min-height: 210px;
+    }
+    .content-single-room .section-content{
+        padding: 0;
+    }
+    .single-room-page .section-content-room .contain{
+        padding: 56px 0 24px;
+    }
+    .section-list-image-room .image-room-pagination{
+        margin-top: 24px;
+    }
+    .single-room-content .section-list-image-room{
+        padding-bottom: 56px;
+    }
+    .single-room-content .utilities-inner{
+        padding: 40px 0;
+    }
+    .list-utilities .grid-contain{
+        display: grid;
+        grid-template-columns: 60% 40%;
+    }
+    .single-room-content .section-utilities h1{
+        font-size: 38px;
+        line-height: 46px;
+        text-align: center;
+    }
+    .single-room-content .section-rules-contain .contain{
+        padding: 32px;
+        min-height: 382px;
+    }
+    .single-room-content .section-rules-contain .rule-wrapper{
+        margin-bottom: 24px;
+    }
+    .single-room-content .section-rules-contain{
+        padding: 40px 0 0;
+
+    }
 }
