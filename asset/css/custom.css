@@ -449,6 +449,9 @@
 .show-all-mobile{
     display: none;
 }
+.section-utilities .btn-book a:hover{
+    color: #FFF;
+}
 @media only screen and (max-width: 768px) {
     .single-banner .single-title h1{
         font-size: 42px;
