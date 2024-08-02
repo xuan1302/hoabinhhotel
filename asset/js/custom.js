@@ -120,14 +120,45 @@
         clickable: true,
       },
     });
-    // var slide_room_mobile = new Swiper(".list-system-rooms", {
-    //   slidesPerView: 1,
-    //   loop:true,
-    //   pagination: {
-    //     el: ".room-pagination",
-    //     clickable: true,
-    //   },
-    // });
+    var slide_organizing_wedding_mobile = new Swiper(".slide-organizing-wedding-mobile", {
+      slidesPerView: 2,
+      loop:true,
+      centeredSlides: true,
+      spaceBetween: 8,
+      pagination: {
+        el: ".organizing-wedding-pagination",
+        clickable: true,
+      },
+    });
+    var slide_conference_organization_mobile = new Swiper(".slide-conference-organization-mobile", {
+      slidesPerView: 2,
+      loop:true,
+      centeredSlides: true,
+      spaceBetween: 8,
+      pagination: {
+        el: ".conference-organization-pagination",
+        clickable: true,
+      },
+    });
+    var slide_entertainment_service_mobile = new Swiper(".slide-entertainment-service-mobile", {
+      slidesPerView: 2,
+      loop:true,
+      centeredSlides: true,
+      spaceBetween: 8,
+      pagination: {
+        el: ".entertainment-service-pagination",
+        clickable: true,
+      },
+    });
+    var slide_related_post = new Swiper(".related-post-content", {
+      slidesPerView: "auto",
+      loop:true,
+      pagination: {
+        el: ".related-post-pagination",
+        clickable: true,
+      },
+    });
+
   }
   $(".menu-responsive").click(function (e) {
     e.stopPropagation();

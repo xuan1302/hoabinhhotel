@@ -99,7 +99,7 @@ $list_image_room = get_field( "image_room" );
                         <div class="utilities-inner">
                             <h1>Tính năng phòng</h1>
                             <div class="row list-utilities">
-                                <div class="col-xl-4 col-12">
+                                <div class="col-xl-4 col-12 grid-contain">
                                     <?php
                                     if ($area) {
                                         ?>
@@ -135,7 +135,7 @@ $list_image_room = get_field( "image_room" );
                                     }
                                     ?>
                                 </div>
-                                <div class="col-xl-4 col-12">
+                                <div class="col-xl-4 col-12 grid-contain">
                                     <?php
                                     if ($air_conditioner) {
                                         ?>
@@ -171,7 +171,7 @@ $list_image_room = get_field( "image_room" );
                                     }
                                     ?>
                                 </div>
-                                <div class="col-xl-4 col-12">
+                                <div class="col-xl-4 col-12 grid-contain">
                                     <?php
                                     if ($park) {
                                         ?>
@@ -217,7 +217,7 @@ $list_image_room = get_field( "image_room" );
                 </div>
                 <div class="section-service-rules container-fluid">
                     <div class="row section-rules-contain">
-                        <div class="col-xl-6 col-12">
+                        <div class="col-xl-6 col-12 rule-wrapper">
                             <div class="contain">
                                 <h1>Điều khoản & Dịch vụ</h1>
                                 <ol>

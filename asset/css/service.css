@@ -24,3 +24,73 @@
 .entertainment-service .inner{
     padding-right: 63px;
 }
+.organizing-wedding .organizing-wedding-mobile{
+    display: none;
+}
+.custom-pagination{
+    text-align: center;
+    margin-top: 24px;
+}
+.custom-pagination .swiper-pagination-bullet{
+    height: 10px;
+    width: 10px;
+    display: inline-block;
+    border-radius: 50%;
+    background: #DADADA;
+    margin: 0 5px;
+}
+.custom-pagination .swiper-pagination-bullet-active{
+    background: #C19D68;
+}
+.conference-organization-mobile{
+    display: none;
+}
+.entertainment-service-mobile{
+    display: none;
+}
+@media only screen and (max-width: 768px) {
+    .template-service .organizing-wedding .inner{
+        padding: 0;
+    }
+    .template-service .organizing-wedding{
+        padding: 56px 0;
+    }
+    .organizing-wedding .section-left{
+        margin-bottom: 32px;
+    }
+    .organizing-wedding .image-organizing-wedding{
+        display: none;
+    }
+    .organizing-wedding .organizing-wedding-mobile{
+        display: block;
+    }
+    .template-service .conference-organization{
+        padding: 56px 0;
+    }
+    .conference-organization .inner{
+        padding: 0;
+        margin-bottom: 32px;
+    }
+   .conference-organization .top-contain{
+       flex-direction: column-reverse;
+   }
+   .list-image-conference-organization{
+       display: none;
+   }
+    .conference-organization-mobile{
+        display: block;
+    }
+    .template-service .entertainment-service{
+        padding: 56px 0;
+    }
+    .entertainment-service .inner{
+        padding: 0;
+        margin-bottom: 32px;
+    }
+    .image-entertainment-service{
+        display: none;
+    }
+    .entertainment-service-mobile{
+        display: block;
+    }
+}

@@ -56,7 +56,7 @@ get_header();
                         <img  class="image" src="<?php echo $image_1['url']?>" />
                     </div>
                 </div>
-                <div class="row">
+                <div class="row image-organizing-wedding">
                     <?php
                         if($list_image_1){
                             foreach($list_image_1 as $item){
@@ -72,6 +72,27 @@ get_header();
                      ?>
                 </div>
             </div>
+            <div class="organizing-wedding-mobile">
+                <div class="swiper slide-organizing-wedding-mobile">
+                    <div class="swiper-wrapper">
+                        <?php
+                        if($list_image_1){
+                            foreach($list_image_1 as $item){
+                                ?>
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <img src="<?php echo $item['image']['url']?>" />
+                                    </div>
+                                </div>
+                                <?php
+                            }
+                        }
+                        ?>
+                    </div>
+                </div>
+                <div class="organizing-wedding-pagination custom-pagination"></div>
+            </div>
+
         </section>
         <section class="conference-organization">
             <div class="container-fluid">
@@ -90,7 +111,7 @@ get_header();
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row list-image-conference-organization">
                     <?php
                         if($list_image_2){
                             foreach($list_image_2 as $item){
@@ -105,6 +126,26 @@ get_header();
                         }
                      ?>   
                 </div>
+            </div>
+            <div class="conference-organization-mobile">
+                <div class="swiper slide-conference-organization-mobile">
+                    <div class="swiper-wrapper">
+                        <?php
+                        if($list_image_1){
+                            foreach($list_image_1 as $item){
+                                ?>
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <img src="<?php echo $item['image']['url']?>" />
+                                    </div>
+                                </div>
+                                <?php
+                            }
+                        }
+                        ?>
+                    </div>
+                </div>
+                <div class="conference-organization-pagination custom-pagination"></div>
             </div>
         </section>
         <section class="entertainment-service">
@@ -124,7 +165,7 @@ get_header();
                         <img  class="image" src="<?php echo $image_1['url']?>" />
                     </div>
                 </div>
-                <div class="row">
+                <div class="row image-entertainment-service">
                     <?php
                         if($list_image_1){
                             foreach($list_image_1 as $item){
@@ -140,6 +181,26 @@ get_header();
                      ?>
                 </div>
             </div>
+            <div class="entertainment-service-mobile">
+                <div class="swiper slide-entertainment-service-mobile">
+                    <div class="swiper-wrapper">
+                        <?php
+                        if($list_image_1){
+                            foreach($list_image_1 as $item){
+                                ?>
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <img src="<?php echo $item['image']['url']?>" />
+                                    </div>
+                                </div>
+                                <?php
+                            }
+                        }
+                        ?>
+                    </div>
+                </div>
+                <div class="entertainment-service-pagination custom-pagination"></div>
+            </div>
         </section>
         <?php
         if($myposts_system_room) { ?>
@@ -147,10 +208,10 @@ get_header();
                 <div class="system-room-container">
                     <h3 class="title">Hệ thống phòng nghỉ</h3>
                     <div class="list-system-rooms swiper">
-                        <div class="swiper-wrapper">
+                        <div class="swiper-wrapper room-wrapper">
                             <?php
                             foreach ($myposts_system_room as $item) { ?>
-                                <div class="swiper-slide item">
+                                <div class="swiper-slide item item-room">
                                     <div class="img">
                                         <div class="thumbnail">
                                             <a href="<?php echo get_permalink($item->ID); ?>">
