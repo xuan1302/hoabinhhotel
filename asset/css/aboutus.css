@@ -6,7 +6,7 @@
 .template-about-us .slide-image-contain .swiper-slide img {
     display: block;
     width: 100%;
-    max-height: 504px;
+	height: 504px;
     object-fit: cover;
 }
 .template-about-us .section-contain{
@@ -70,7 +70,7 @@
 		padding: 56px 0 24px;
 	}
 	.template-about-us .slide-image-contain .swiper-slide img {
-		height: 240px;
+		height: 210px;
 	}
 	.slide-image-contain .image-pagination{
 		margin-top: 24px;

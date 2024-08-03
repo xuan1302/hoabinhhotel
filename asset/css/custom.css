@@ -399,6 +399,12 @@
 .section-list-image-room .image-room-pagination .swiper-pagination-bullet-active{
     background: #C19D68;
 }
+.section-list-image-room .list-image-room img{
+    width: 100%;
+    object-fit: cover;
+    height: 504px;
+    display: block;
+}
 .list-system-rooms .link-to-room .booking-link:hover img{
     filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
 }
@@ -576,5 +582,8 @@
     .single-room-content .section-rules-contain{
         padding: 40px 0 0;
 
+    }
+    .section-list-image-room .list-image-room img{
+        height: 210px;
     }
 }
