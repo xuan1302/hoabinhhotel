@@ -35,6 +35,14 @@
     .link-to-room a:nth-child(2){
         padding: 10px;
     }
+    .content-room-booking .system-room > .row{
+        flex-direction: column;
+    }
+    .content-room-booking .item-bk{
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
 }
 @media only screen and (max-width: 1024px) {
     .content-slide-home .title, .content-slide-home .sub-title{
@@ -77,6 +85,18 @@
     }
     .img-slider-bg{
         min-height: 600px;
+    }
+    .content-form-booking{
+        width: 100%;
+    }
+    .content-checkout-booking{
+        flex-direction: column;
+    }
+    .content-checkout-booking .left-content, .content-checkout-booking .right-content{
+        width: 100%;
+    }
+    .content-contact > .custom-container{
+        flex-direction: column;
     }
 }
 @media only screen and (max-width: 991px) {
@@ -123,6 +143,10 @@
     /*#masthead{*/
     /*    top: 45px;*/
     /*}*/
+    .content-checkout-booking .info-bottom .item-left,
+    .content-checkout-booking .info-bottom .item-right{
+        width: 150px;
+    }
 }
 @media only screen and (max-width: 800px) {
     .about-us-home .right-col{
@@ -165,8 +189,57 @@
     .img-slider-bg{
         min-height: 596px;
     }
+    .form-booking-home{
+        margin: 0;
+    }
+    .form-booking-home .form-booking{
+        flex-direction: column;
+        align-items: initial;
+        gap: 24px;
+    }
+    .form-booking button.btn-submit{
+        width: 100%;
+        border-radius: 4px;
+    }
+    .content-form-booking{
+        padding: 20px 0;
+    }
+    .form-booking button.btn-submit span{
+        display: inline-block;
+    }
+    .content-template-booking .form-booking{
+        flex-direction: column;
+        gap: 24px;
+        align-items: initial;
+    }
+    .booking-f{
+        background-color: #fff;
+        box-shadow: 0px 4px 8px 0px #00000014;
+    }
+    .item-room-booking{
+        flex-direction: column;
+    }
+    .item-room-booking .ct-top{
+        margin-bottom: 20px;
+    }
+    .content-template-booking{
+        position: relative;
+    }
+    .item-sticky{
+        position: sticky;
+        bottom: 0;
+        z-index: 9;
+    }
 }
 @media only screen and (max-width: 575px) {
+    .form-info-lh .col-3,
+    .form-info-lh .col-9,
+    .form-info-lh .col-6
+    {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
 
 }
 @media only screen and (max-width: 560px) {
@@ -228,6 +301,10 @@
     .content-slide-home .title{
         font-size: 42px;
         line-height: 52px;
+    }
+    .acc-bank .qr-code{
+        flex-direction: column;
+        align-items: initial;
     }
 }
 @media only screen and (max-width: 480px) {
