@@ -1,81 +1,8 @@
 (function ($) {
-  // //menu
-  // $('.icon-mobile-bar').click(function () {
-  //   $('.menu-mobile').addClass('active');
-  // })
-  // $('.icon-close-menu').click(function () {
-  //   $('.menu-mobile').removeClass('active');
-  // })
-  //
-  // $("#pw_custom").on({
-  //   keydown: function (e) {
-  //     if (e.which === 32)
-  //       return false;
-  //   },
-  //   change: function () {
-  //     this.value = this.value.replace(/\s/g, "");
-  //   }
-  // });
-  //
-  // //slide
-  // var swiper = new Swiper(".list-img-slide", {
-  //   slidesPerView: 4,
-  //   spaceBetween: 15,
-  //   loop: true,
-  //   // centeredSlides: true,
-  //   autoplay: {
-  //     delay: 2500,
-  //     disableOnInteraction: false,
-  //   },
-  //   breakpoints: {
-  //     320: {
-  //       slidesPerView: 1,
-  //     },
-  //     640: {
-  //       slidesPerView: 2,
-  //     },
-  //     768: {
-  //       slidesPerView: 3,
-  //     },
-  //     1024: {
-  //       slidesPerView: 4,
-  //     },
-  //   },
-  //   // pagination: {
-  //   //   el: ".swiper-pagination",
-  //   //   clickable: true,
-  //   // },
-  // });
-  //
-  //
-  // var swiper = new Swiper(".slide-home-bottom", {
-  //   slidesPerView: 4,
-  //   spaceBetween: 15,
-  //   loop: true,
-  //   // centeredSlides: true,
-  //   autoplay: {
-  //     delay: 2500,
-  //     disableOnInteraction: false,
-  //   },
-  //   breakpoints: {
-  //     320: {
-  //       slidesPerView: 1,
-  //     },
-  //     640: {
-  //       slidesPerView: 2,
-  //     },
-  //     768: {
-  //       slidesPerView: 3,
-  //     },
-  //     1024: {
-  //       slidesPerView: 4,
-  //     },
-  //   },
-  //   // pagination: {
-  //   //   el: ".swiper-pagination",
-  //   //   clickable: true,
-  //   // },
-  // });
+  $(document).ready(function() {
+    swiperCard();
+    $(window).resize(swiperCard);
+  });
   var slide_image = new Swiper(".slide-list-image", {
     slidesPerView: 2,
     spaceBetween: 8,
@@ -87,16 +14,17 @@
     },
   });
 
-  var slide_room = new Swiper(".list-system-rooms", {
-    slidesPerView: 3,
-    centeredSlides: true,
-    spaceBetween: 24,
+  var slide_image_room = new Swiper(".list-image-room", {
+    slidesPerView: 2,
+    spaceBetween: 8,
     loop:true,
+    centeredSlides: true,
     pagination: {
-      el: ".room-pagination",
+      el: ".image-room-pagination",
       clickable: true,
     },
   });
+
 
   var swiper = new Swiper(".mySwiper", {
     slidesPerView: 2,
@@ -127,7 +55,28 @@
       clickable: true,
     },
   });
-
+  var init = false;
+  var slide_room
+  function swiperCard() {
+    if ($(window).width() >= 768) {
+      if (!init) {
+        init = true;
+          slide_room = new Swiper(".list-system-rooms", {
+          slidesPerView: 3,
+          centeredSlides: true,
+          spaceBetween: 24,
+          loop:true,
+          pagination: {
+            el: ".room-pagination",
+            clickable: true,
+          },
+        });
+      }
+    } else if (init) {
+      slide_room.destroy();
+      init = false;
+    }
+  }
   $(window).scroll(function() {
     if ($(this).scrollTop() > 100) {
       $('#back-to-top').fadeIn();
@@ -171,6 +120,45 @@
         clickable: true,
       },
     });
+    var slide_organizing_wedding_mobile = new Swiper(".slide-organizing-wedding-mobile", {
+      slidesPerView: 2,
+      loop:true,
+      centeredSlides: true,
+      spaceBetween: 8,
+      pagination: {
+        el: ".organizing-wedding-pagination",
+        clickable: true,
+      },
+    });
+    var slide_conference_organization_mobile = new Swiper(".slide-conference-organization-mobile", {
+      slidesPerView: 2,
+      loop:true,
+      centeredSlides: true,
+      spaceBetween: 8,
+      pagination: {
+        el: ".conference-organization-pagination",
+        clickable: true,
+      },
+    });
+    var slide_entertainment_service_mobile = new Swiper(".slide-entertainment-service-mobile", {
+      slidesPerView: 2,
+      loop:true,
+      centeredSlides: true,
+      spaceBetween: 8,
+      pagination: {
+        el: ".entertainment-service-pagination",
+        clickable: true,
+      },
+    });
+    var slide_related_post = new Swiper(".related-post-content", {
+      slidesPerView: "auto",
+      loop:true,
+      pagination: {
+        el: ".related-post-pagination",
+        clickable: true,
+      },
+    });
+
   }
   $(".menu-responsive").click(function (e) {
     e.stopPropagation();

@@ -209,7 +209,8 @@ if ( !function_exists( 'related_posts' ) ){
 							            </div>
                                         <div class="readmore-block">
                                             <a href="<?php echo esc_url(get_the_permalink($post->ID)); ?>" class="entry-readmore">
-                                                <?php echo esc_html__('đọc thêm', 'cct'); ?>
+                                                <?php echo esc_html__('XEM THÊM', 'cct'); ?>
+                                                <img src="<?php bloginfo('template_url'); ?>/asset/icons/arrow-right-black.png" alt="">
                                             </a>
 
                                         </div>
@@ -219,7 +220,7 @@ if ( !function_exists( 'related_posts' ) ){
                     <?php } ?>
                     </div>
                 </div>
-                <div class="blog-pagination "></div>
+                <div class="related-post-pagination"></div>
                 <?php $posttype = get_post_type();
                 if ( $posttype == 'post' ) {
                     global $post;
@@ -227,9 +228,8 @@ if ( !function_exists( 'related_posts' ) ){
                     $category_link = get_category_link( $categories[0] );
                     ?>
                     <div class="show-all show-all-mobile">
-                        <a href="<?php echo esc_url( $category_link ); ?>" title="Category Name">Xem thêm bài viết<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.77 6C5.77 5.58579 6.10579 5.25 6.52 5.25H19C19.4142 5.25 19.75 5.58579 19.75 6V18.48C19.75 18.8942 19.4142 19.23 19 19.23C18.5858 19.23 18.25 18.8942 18.25 18.48V7.81066L6.53033 19.5303C6.23744 19.8232 5.76256 19.8232 5.46967 19.5303C5.17678 19.2374 5.17678 18.7626 5.46967 18.4697L17.1893 6.75H6.52C6.10579 6.75 5.77 6.41421 5.77 6Z" fill="#324894"/>
-                            </svg>
+                        <a href="<?php echo esc_url( $category_link ); ?>" title="Category Name">Xem thêm bài viết
+                            <img src="<?php bloginfo('template_url'); ?>/asset/icons/arrow-right-black.png" alt="">
                         </a>
                     </div>
 
