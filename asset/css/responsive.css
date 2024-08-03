@@ -230,6 +230,9 @@
         bottom: 0;
         z-index: 9;
     }
+    .admin-bar #masthead{
+        top: 90px;
+    }
 }
 @media only screen and (max-width: 575px) {
     .form-info-lh .col-3,
@@ -240,7 +243,9 @@
         flex: 0 0 100%;
         max-width: 100%;
     }
-
+    .list-icon-fixed{
+        display: none;
+    }
 }
 @media only screen and (max-width: 560px) {
 

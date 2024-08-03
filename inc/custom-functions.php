@@ -246,9 +246,6 @@ function custom_image_sizes() {
 add_action('after_setup_theme', 'custom_image_sizes');
 
 function handle_my_custom_form_action() {
-//    if (isset($_POST['range_date'])) {
-//
-//    }
     $range_date = sanitize_text_field($_POST['range_date']);
     $num_adult = sanitize_text_field($_POST['adults']);
     $num_child = sanitize_text_field($_POST['children']);
@@ -269,8 +266,6 @@ function handle_form_submit_checkout() {
     $num_child = sanitize_text_field($_POST['children']);
     $posts = json_decode(wp_unslash($_POST['posts']), true);
     $count_room = urlencode($_POST['count_room']);
-//    var_dump($count_room);
-//    return;
     $redirect_url = add_query_arg(array(
         'fromDate' => explode('-', $range_date)[0],
         'toDate' => explode('-', $range_date)[1],
@@ -338,4 +333,15 @@ function handleGetNumberRoom($countRoom = [], $id = 0){
             return $item['count'];
         }
     }
+}
+
+function getTotalMoneyDeposit($data =[]){
+    $total = 0;
+    if(count($data) < 1){
+        return $total;
+    }
+    foreach ($data as $item){
+        $total += $item['deposit'] * $item['count'];
+    }
+    return number_format($total, 0, ',', '.');
 }

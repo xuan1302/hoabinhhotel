@@ -33,7 +33,7 @@ $name_facebook = get_field('name_facebook', 'option');
 <div id="page" class="site">
     <div class="menu-responsive">
         <div class="icon-close-res-menu">
-            <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-slose-black.png" alt="">
+            <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-slose-black.svg" alt="">
         </div>
 
         <div class="content-menu-mobile">
@@ -56,14 +56,14 @@ $name_facebook = get_field('name_facebook', 'option');
                 <div class="left-topbar">
                     <div class="item item-address">
                         <span class="icon">
-                            <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon_map.png" alt="">
+                            <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon_map.svg" alt="">
                         </span>
                         <span><?php echo $address_topbar; ?></span>
                     </div>
                     <div class="item item-map">
                         <a href="<?php echo $link_map; ?>" target="_blank" class="item">
                             <span class="icon">
-                                <img src="<?php bloginfo('template_url'); ?>/asset/icons/map-02.png" alt="">
+                                <img src="<?php bloginfo('template_url'); ?>/asset/icons/map-02.svg" alt="">
                             </span>
                             <span>Bản đồ chỉ dẫn</span>
                         </a>
@@ -73,7 +73,7 @@ $name_facebook = get_field('name_facebook', 'option');
                     <div class="item item-hotline">
                         <a href="tel:<?php echo $hotline_topbar; ?>" class="item">
                             <span class="icon">
-                                <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-phone.png" alt="">
+                                <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-phone.svg" alt="">
                             </span>
                             <span>HOTLINE ĐẶT PHÒNG <?php echo $hotline_topbar; ?></span>
                         </a>
@@ -81,7 +81,7 @@ $name_facebook = get_field('name_facebook', 'option');
                     <div class="item item-fb">
                         <a href="<?php echo $hotline_topbar; ?>" target="_blank" class="item">
                             <span class="icon">
-                                <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-fb.png" alt="">
+                                <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-fb.svg" alt="">
                             </span>
                             <span><?php echo $name_facebook; ?></span>
                         </a>
@@ -127,7 +127,7 @@ $name_facebook = get_field('name_facebook', 'option');
                 </nav>
             </div>
             <div class="icon-menu-mobile">
-                <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-menu-mobile.png" alt="">
+                <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-menu-mobile.svg" alt="">
             </div>
         </div>
 	</header><!-- #masthead -->
