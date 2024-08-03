@@ -34,6 +34,7 @@ $args_system_room = array(
 );
 $myposts_system_room = get_posts($args_system_room);
 $list_image_room = get_field( "image_room" );
+
 ?>
 
     <main id="primary" class="site-main single-room-page">
@@ -52,6 +53,78 @@ $list_image_room = get_field( "image_room" );
                 </div>
             </div>
         </div>
+        <form action="<?php echo esc_url(admin_url('admin-post.php')); ?>" method="post">
+            <div class="booking-f">
+                <div class="">
+                    <div class="container">
+                        <div class="content-form-booking">
+                            <div class="form-booking">
+                                <div class="date-range">
+                                    <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-calandar.png" alt="">
+                                    <input type="text" class="dateRange" id="dateRange" name="range_date">
+                                    <div class="count-date">(<span class="totalDate">1</span>đêm )</div>
+                                    <div class="icon-date">
+                                        <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-arrow-bt.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="select-person">
+                                    <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-user.png" alt="">
+                                    <span> <span id="num-adult">1</span> người lớn - <span id="num-child">0</span> trẻ em </span>
+                                    <div class="icon">
+                                        <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-arrow-bt.png" alt="">
+                                    </div>
+                                    <div class="change-number-person">
+                                        <div class="list-item">
+                                            <div class="item">
+                                                <div class="item-left">
+                                                    <label>Người lớn</label>
+                                                    <span>16 tuổi trở lên</span>
+                                                </div>
+                                                <div class="item-right">
+                                                    <div class="input-group">
+                                                        <button class="decrease" type="button">
+                                                            <img src="<?php bloginfo('template_url'); ?>/asset/icons/-.png" alt="">
+                                                        </button>
+                                                        <input id="numberAdults" onchange="" name="adults" type="number" class="numberInput numberInputAdult" value="1" min="0" max="100">
+                                                        <button class="increase" type="button">
+                                                            <img src="<?php bloginfo('template_url'); ?>/asset/icons/+.png" alt="">
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="item-left">
+                                                    <label>Trẻ em</label>
+                                                    <span>0 - 16 tuổi</span>
+                                                </div>
+                                                <div class="item-right">
+                                                    <div class="input-group">
+                                                        <button class="decrease" type="button">
+                                                            <img src="<?php bloginfo('template_url'); ?>/asset/icons/-.png" alt="">
+                                                        </button>
+                                                        <input name='children' id="numberChildren" type="number" class="numberInput" value="0" min="0" max="100">
+                                                        <button class="increase" type="button">
+                                                            <img src="<?php bloginfo('template_url'); ?>/asset/icons/+.png" alt="">
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="btn-action">
+                                            <button type="button" class="submit-persion">Xác nhận</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <input type="hidden" name="action" value="my_custom_form_action">
+                                <button type="submit" class="btn-submit">
+                                    <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-search.png" alt="">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
         <div class="content-single-room">
             <div class="single-room-content">
                 <div class="section-content-room container-fluid">
