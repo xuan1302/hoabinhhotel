@@ -1218,10 +1218,10 @@ a.action-arrow-right-blue{
     margin-bottom: 20px;
 }
 .booking-success .icon{
-    width: 10%;
+    width: 48px;
 }
 .booking-success .text{
-    width: 90%;
+    width: 100%;
     font-weight: 600;
     font-size: 18px;
     line-height: 28px;
