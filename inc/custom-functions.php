@@ -246,22 +246,38 @@ function custom_image_sizes() {
 add_action('after_setup_theme', 'custom_image_sizes');
 
 function handle_my_custom_form_action() {
-    if (isset($_POST['range_date'])) {
-        $range_date = sanitize_text_field($_POST['range_date']);
-        $redirect_url = add_query_arg(array(
-            'range_date' => rawurlencode($range_date),
-        ), home_url('/booking/'));
-        wp_safe_redirect($redirect_url);
-        exit;
-    }
+//    if (isset($_POST['range_date'])) {
+//
+//    }
+    $range_date = sanitize_text_field($_POST['range_date']);
+    $num_adult = sanitize_text_field($_POST['adults']);
+    $num_child = sanitize_text_field($_POST['children']);
+    $redirect_url = add_query_arg(array(
+        'range_date' => rawurlencode($range_date),
+        'adults' => rawurlencode($num_adult),
+        'children' => rawurlencode($num_child),
+    ), home_url('/booking/'));
+    wp_safe_redirect($redirect_url);
+    exit;
 }
 add_action('admin_post_my_custom_form_action', 'handle_my_custom_form_action');
 add_action('admin_post_nopriv_my_custom_form_action', 'handle_my_custom_form_action');
 
 function handle_form_submit_checkout() {
+    $range_date = sanitize_text_field($_POST['range_date']);
+    $num_adult = sanitize_text_field($_POST['adults']);
+    $num_child = sanitize_text_field($_POST['children']);
+    $posts = json_decode(wp_unslash($_POST['posts']), true);
+    $count_room = urlencode($_POST['count_room']);
+//    var_dump($count_room);
+//    return;
     $redirect_url = add_query_arg(array(
-//        'range_date' => rawurlencode($range_date),
-        'range_date' => '123',
+        'fromDate' => explode('-', $range_date)[0],
+        'toDate' => explode('-', $range_date)[1],
+        'idsPost' => json_encode($posts),
+        'countRoom' => json_encode($count_room),
+        'adult' => json_encode($num_adult),
+        'child' => json_encode($num_child),
     ), home_url('/checkout-booking/'));
     wp_safe_redirect($redirect_url);
     exit;
@@ -269,3 +285,57 @@ function handle_form_submit_checkout() {
 add_action('admin_post_handle_form_submit_checkout', 'handle_form_submit_checkout');
 add_action('admin_post_nopriv_handle_form_submit_checkout', 'handle_form_submit_checkout');
 
+
+add_action('wpcf7_mail_sent', 'custom_after_form_sent');
+
+function custom_after_form_sent($contact_form) {
+    // Lấy ID của form
+    $form_id = $contact_form->id();
+
+    // Kiểm tra ID của form (nếu bạn muốn chỉ xử lý cho form cụ thể)
+    if ($form_id == 123) { // Thay 123 bằng ID của form của bạn
+        ?>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                console.log('done')
+            });
+        </script>
+        <?php
+    }
+}
+
+function enqueue_custom_script_for_specific_template() {
+    // Kiểm tra nếu trang hiện tại sử dụng template cụ thể
+    if (is_page_template('templates/checkout-booking.php')) { // Thay 'template-custom.php' bằng tên template của bạn
+        wp_enqueue_script( 'checkout-js', get_template_directory_uri() . '/asset/js/checkout.js', array( ), THEME_VERSION, true );
+    }
+}
+add_action('wp_enqueue_scripts', 'enqueue_custom_script_for_specific_template');
+
+function diffDate($fromDate, $toDate){
+    $date1 = DateTime::createFromFormat('d/m/Y', $fromDate);
+    $date2 = DateTime::createFromFormat('d/m/Y', $toDate);
+    return $date1->diff($date2)->days;
+}
+
+function getTotalMoney($data = [], $totalDem = 0){
+    $total = 0;
+    if(count($data) < 1){
+        return $total;
+    }
+    foreach ($data as $item){
+        $total += $totalDem * $item['price'] * $item['count'];
+    }
+    return number_format($total, 0, ',', '.');
+}
+
+function handleGetNumberRoom($countRoom = [], $id = 0){
+    if(!$id || count($countRoom) < 1){
+        return 0;
+    }
+    foreach ($countRoom as $item){
+        if ($item['id'] == $id ){
+            return $item['count'];
+        }
+    }
+}

@@ -1,56 +1,77 @@
 <?php
 //Template Name: Checkout Booking
 get_header();
+$fromDate = sanitize_text_field( $_GET['fromDate'] );
+$toDate = sanitize_text_field( $_GET['toDate'] );
+$num_adult = sanitize_text_field( $_GET['adult'] );
+$num_child = sanitize_text_field( $_GET['child'] );
+$idsPost = json_decode(wp_unslash($_GET['idsPost']), true);
+$countRoom = json_decode(wp_unslash((wp_unslash($_GET['countRoom']))), true);
+$args_system_room = array(
+    'post_type' => 'rooms',
+    'post_status' => 'publish',
+    'post__in'   => $idsPost,
+);
+$myposts_system_room = get_posts($args_system_room);
+
 ?>
 
     <div class="content-template-checkout-booking">
         <div class="custom-container">
-            <a href="" class="back-checkout">Chỉnh sửa thông tin liên hệ</a>
+            <a href="" class="back-checkout">
+                <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-back.png" alt="">
+                Chỉnh sửa thông tin liên hệ</a>
             <div class="content-checkout-booking">
                 <div class="left-content">
                     <h4 class="title">Thông tin đặt phòng</h4>
                     <div class="list-room-booking">
-                        <div class="item">
-                            <div class="thumbnail">
-                                <img src="http://localhost/hotelhoabinh/wp-content/uploads/2024/07/Rectangle-13-1.png" alt="">
-                            </div>
-                            <div class="content-room">
-                                <h5>Phòng đôi</h5>
-                                <div class="price">
-                                    <span>Giá</span>
-                                    <b>500.000 VND</b>
+                        <?php
+                            foreach ($myposts_system_room as $item) {
+                                $price = number_format(get_post_meta( $item->ID, 'price', true  ), 0,'','.');
+                                ?>
+                                <div class="item">
+                                    <div class="thumbnail">
+                                        <?php echo get_the_post_thumbnail($item->ID,'blog-thumbnail'); ?>
+                                    </div>
+                                    <div class="content-room">
+                                        <h5><?php echo get_the_title($item->ID); ?></h5>
+                                        <div class="price">
+                                            <span>Giá</span>
+                                            <b><?php echo $price; ?> VND</b>
+                                        </div>
+                                        <div class="count">
+                                            <span>Số lượng</span>
+                                            <b><?php echo handleGetNumberRoom($countRoom, $item->ID)?></b>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="count">
-                                    <span>Số lượng</span>
-                                    <b>03</b>
-                                </div>
-                            </div>
-                        </div>
+                            <?php }
+                        ?>
                     </div>
                     <div class="info-booking">
                         <div class="item">
                             <label>Ngày đến</label>
-                            <b>13/07/2024</b>
+                            <b><?php echo $fromDate; ?></b>
                         </div>
                         <div class="item">
                             <label>Ngày về</label>
-                            <b>13/07/2024</b>
+                            <b><?php echo $toDate; ?></b>
                         </div>
                         <div class="item">
                             <label>Đêm</label>
-                            <b>08</b>
+                            <b><?php echo diffDate($fromDate,$toDate); ?></b>
                         </div>
                         <div class="item">
                             <label>Số lượng phòng</label>
-                            <b>03</b>
+                            <b><?php echo count($countRoom); ?></b>
                         </div>
                         <div class="item">
                             <label>Người lớn</label>
-                            <b>03</b>
+                            <b><?php echo $num_adult; ?></b>
                         </div>
                         <div class="item">
                             <label>Trẻ em</label>
-                            <b>00</b>
+                            <b><?php echo $num_child; ?></b>
                         </div>
                     </div>
                     <div class="info-bottom">
@@ -60,7 +81,7 @@ get_header();
                                 <p>*Thanh toán khi trả phòng</p>
                             </div>
                             <div class="total-mn">
-                                4.800.000 VND
+                                <?php echo getTotalMoney($countRoom, diffDate($fromDate,$toDate) );?> VND
                             </div>
                         </div>
                         <div class="item">
@@ -75,53 +96,9 @@ get_header();
                     </div>
                 </div>
                 <div class="right-content">
-<!--                    <div class="form-content-right">-->
-<!--                        <h4 class="title">Điền thông tin liên hệ</h4>-->
-<!--                    </div>-->
-                    <div class="info-prepayment">
-                        <h4 class="title">Thông tin thanh toán Phí đặt trước</h4>
-                        <div class="acc-bank">
-                            <div class="qr-code">
-                                <img src="http://localhost/hotelhoabinh/wp-content/uploads/2024/07/Rectangle-13-1.png" alt="">
-                                <div class="info-bank">
-                                    <div class="content-info-bank">
-                                        <div class="item">
-                                            <label>Tên ngân hàng</label>
-                                            <b>Vietcombank</b>
-                                        </div>
-                                        <div class="item">
-                                            <label>Số tài khoản</label>
-                                            <b>10237568273</b>
-                                        </div>
-                                        <div class="item">
-                                            <label>Tên chủ tài khoản</label>
-                                            <b>NGUYEN VAN A</b>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="note">
-                            <h5>LƯU Ý: </h5>
-                            <ul>
-                                <li>Nội dung chuyển khoản ghi số điện thoại đã điền ở thông tin liên hệ.</li>
-                                <li>Chuyển chính xác số tiền Phí đặt trước được ghi ở cột bên phải.</li>
-                                <li>Phí đặt trước sẽ được hoàn lại khi trả phòng.</li>
-                                <li>Tiền Phí đặt trước sẽ không được hoàn lại khi khách hủy đặt phòng. </li>
-                            </ul>
-                        </div>
-                        <div class="booking-success">
-                            <div class="icon">
-                                <img src="http://localhost/hotelhoabinh/wp-content/uploads/2024/07/Rectangle-13-1.png" alt="">
-                            </div>
-                            <div class="text">
-                                Booking của bạn sẽ được xác nhận sau khi bạn thanh toán Phí đặt trước. Chúng tôi sẽ sớm liên hệ với bạn qua số điện thoại.
-                            </div>
-                        </div>
-                        <div class="hotline-booking-success">
-                            Gọi Hotline <b>0238 3746 888</b>  để được hỗ trợ 24/7
-                        </div>
-                    </div>
+                    <div class="form-content-right">
+                        <h4 class="title">Điền thông tin liên hệ</h4>
+                        <?php echo do_shortcode('[contact-form-7 id="12af700" title="Form checkout booking"]'); ?>
                 </div>
             </div>
         </div>
