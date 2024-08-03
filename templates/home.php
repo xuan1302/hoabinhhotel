@@ -12,7 +12,7 @@ $shortcode_review = get_field( "shortcode_review" );
 
 $args_system_room = array(
     'post_type' => 'rooms',
-    'posts_per_page' => 5,
+//    'posts_per_page' => 5,
     'post_status' => 'publish',
 );
 $myposts_system_room = get_posts($args_system_room);
@@ -53,10 +53,69 @@ $myposts_experience = get_posts( $args_experience );
                 <div class="container">
                     <div class="content-form-booking">
                         <form action="<?php echo esc_url(admin_url('admin-post.php')); ?>" method="post">
-                            <input type="hidden" name="action" value="my_custom_form_action">
-                            <label for="name">Name:</label>
-                            <input type="text" id="name" name="range_date" required>
-                            <input type="submit" value="Submit">
+                            <div class="form-booking">
+                                <div class="date-range">
+                                    <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-calandar.png" alt="">
+                                    <input type="text" id="dateRange" name="range_date">
+                                    <div class="count-date">(<span class="totalDate">1</span>đêm )</div>
+                                    <div class="icon-date">
+                                        <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-arrow-bt.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="select-person">
+                                    <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-user.png" alt="">
+                                    <span> <span id="num-adult">1</span> người lớn - <span id="num-child">0</span> trẻ em </span>
+                                    <div class="icon">
+                                        <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-arrow-bt.png" alt="">
+                                    </div>
+                                    <div class="change-number-person">
+                                        <div class="list-item">
+                                            <div class="item">
+                                                <div class="item-left">
+                                                    <label>Người lớn</label>
+                                                    <span>16 tuổi trở lên</span>
+                                                </div>
+                                                <div class="item-right">
+                                                    <div class="input-group">
+                                                        <button class="decrease" type="button">
+                                                            <img src="<?php bloginfo('template_url'); ?>/asset/icons/-.png" alt="">
+                                                        </button>
+                                                            <input id="numberAdults" name="adults" type="number" class="numberInput" value="1" min="0" max="100">
+                                                        <button class="increase" type="button">
+                                                            <img src="<?php bloginfo('template_url'); ?>/asset/icons/+.png" alt="">
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="item-left">
+                                                    <label>Trẻ em</label>
+                                                    <span>0 - 16 tuổi</span>
+                                                </div>
+                                                <div class="item-right">
+                                                    <div class="input-group">
+                                                        <button class="decrease" type="button">
+                                                            <img src="<?php bloginfo('template_url'); ?>/asset/icons/-.png" alt="">
+                                                        </button>
+                                                            <input name='children' id="numberChildren" type="number" class="numberInput" value="0" min="0" max="100">
+                                                        <button class="increase" type="button">
+                                                            <img src="<?php bloginfo('template_url'); ?>/asset/icons/+.png" alt="">
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="btn-action">
+                                            <button type="button" class="submit-persion">Xác nhận</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <input type="hidden" name="action" value="my_custom_form_action">
+                                <button type="submit" class="btn-submit">
+                                    <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-search.png" alt="">
+                                    <span>Tìm phòng</span>
+                                </button>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -87,7 +146,9 @@ $myposts_experience = get_posts( $args_experience );
                         <div class="list-post-system">
                             <div class="row">
                                 <?php
-                                    foreach ($myposts_system_room as $item) { ?>
+                                    foreach ($myposts_system_room as $item) {
+                                        $price = number_format(get_post_meta( $item->ID, 'price', true  ), 0,'','.');
+                                        ?>
                                         <div class="col-sm-6 col-md-4 item">
                                             <div class="img">
                                                 <div class="thumbnail">
@@ -103,20 +164,20 @@ $myposts_experience = get_posts( $args_experience );
                                                     <h4 class="title-post"><?php echo get_the_title($item->ID); ?></h4>
                                                 </a>
                                                 <div class="price">
-                                                    Từ 500.000 VND/đêm
+                                                    Từ <?php echo $price; ?> VND/đêm
                                                 </div>
                                                 <div class="option-room">
                                                     <div class="op">
                                                         <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-m2.png" alt="">
-                                                        <span>25 m²</span>
+                                                        <span><?php echo get_post_meta( $item->ID, 'area', true); ?> m²</span>
                                                     </div>
                                                     <div class="op">
                                                         <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-bed.png" alt="">
-                                                        <span>25 m²</span>
+                                                        <span><?php echo get_post_meta( $item->ID, 'bed', true); ?> giường</span>
                                                     </div>
                                                     <div class="op">
                                                         <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-profile.png" alt="">
-                                                        <span>25 m²</span>
+                                                        <span><?php echo get_post_meta( $item->ID, 'person', true); ?></span>
                                                     </div>
                                                 </div>
                                                 <div class="link-to-room">
