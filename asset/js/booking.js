@@ -67,7 +67,7 @@
     $('.increase').click(function() {
         var input = $(this).siblings('.numberInput');
         var currentValue = parseInt(input.val());
-        if(currentValue > input.attr('max')){
+        if(parseFloat(currentValue) >= parseFloat(input.attr('max'))){
             return
         }
         input.val(currentValue + 1);
@@ -75,11 +75,12 @@
         if($(this).siblings('.id_post').length > 0){
             const id_post = $(this).siblings('.id_post').val();
             const price = $(this).siblings('.price_post').val();
+            const deposit = $(this).siblings('.deposit').val();
             const listPostId = JSON.parse($('#posts').val());
             let  count_room = JSON.parse($('#count_room').val());
             if(!listPostId.includes(id_post)){
                 listPostId.push(id_post);
-                count_room = [...count_room, {id: id_post, count: currentValue + 1, price}];
+                count_room = [...count_room, {id: id_post, count: currentValue + 1, price, deposit}];
             }
             let obj = count_room.find(obj => obj.id === id_post);
             if (obj) {

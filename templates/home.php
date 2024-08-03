@@ -55,18 +55,18 @@ $myposts_experience = get_posts( $args_experience );
                         <form action="<?php echo esc_url(admin_url('admin-post.php')); ?>" method="post">
                             <div class="form-booking">
                                 <div class="date-range">
-                                    <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-calandar.png" alt="">
+                                    <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-calandar.svg" alt="">
                                     <input type="text" id="dateRange" name="range_date">
                                     <div class="count-date">(<span class="totalDate">1</span>đêm )</div>
                                     <div class="icon-date">
-                                        <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-arrow-bt.png" alt="">
+                                        <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-arrow-bt.svg" alt="">
                                     </div>
                                 </div>
                                 <div class="select-person">
-                                    <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-user.png" alt="">
+                                    <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-user.svg" alt="">
                                     <span> <span id="num-adult">1</span> người lớn - <span id="num-child">0</span> trẻ em </span>
                                     <div class="icon">
-                                        <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-arrow-bt.png" alt="">
+                                        <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-arrow-bt.svg" alt="">
                                     </div>
                                     <div class="change-number-person">
                                         <div class="list-item">
@@ -78,11 +78,11 @@ $myposts_experience = get_posts( $args_experience );
                                                 <div class="item-right">
                                                     <div class="input-group">
                                                         <button class="decrease" type="button">
-                                                            <img src="<?php bloginfo('template_url'); ?>/asset/icons/-.png" alt="">
+                                                            <img src="<?php bloginfo('template_url'); ?>/asset/icons/-.svg" alt="">
                                                         </button>
                                                             <input id="numberAdults" name="adults" type="number" class="numberInput" value="1" min="0" max="100">
                                                         <button class="increase" type="button">
-                                                            <img src="<?php bloginfo('template_url'); ?>/asset/icons/+.png" alt="">
+                                                            <img src="<?php bloginfo('template_url'); ?>/asset/icons/+.svg" alt="">
                                                         </button>
                                                     </div>
                                                 </div>
@@ -95,11 +95,11 @@ $myposts_experience = get_posts( $args_experience );
                                                 <div class="item-right">
                                                     <div class="input-group">
                                                         <button class="decrease" type="button">
-                                                            <img src="<?php bloginfo('template_url'); ?>/asset/icons/-.png" alt="">
+                                                            <img src="<?php bloginfo('template_url'); ?>/asset/icons/-.svg" alt="">
                                                         </button>
-                                                            <input name='children' id="numberChildren" type="number" class="numberInput" value="0" min="0" max="100">
+                                                            <input name='children' id="numberChildren" type="number" class="numberInput" value="0" min="0" max="100" readonly>
                                                         <button class="increase" type="button">
-                                                            <img src="<?php bloginfo('template_url'); ?>/asset/icons/+.png" alt="">
+                                                            <img src="<?php bloginfo('template_url'); ?>/asset/icons/+.svg" alt="">
                                                         </button>
                                                     </div>
                                                 </div>
@@ -112,7 +112,7 @@ $myposts_experience = get_posts( $args_experience );
                                 </div>
                                 <input type="hidden" name="action" value="my_custom_form_action">
                                 <button type="submit" class="btn-submit">
-                                    <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-search.png" alt="">
+                                    <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-search.svg" alt="">
                                     <span>Tìm phòng</span>
                                 </button>
                             </div>
@@ -168,21 +168,21 @@ $myposts_experience = get_posts( $args_experience );
                                                 </div>
                                                 <div class="option-room">
                                                     <div class="op">
-                                                        <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-m2.png" alt="">
+                                                        <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-m2.svg" alt="">
                                                         <span><?php echo get_post_meta( $item->ID, 'area', true); ?> m²</span>
                                                     </div>
                                                     <div class="op">
-                                                        <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-bed.png" alt="">
+                                                        <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-bed.svg" alt="">
                                                         <span><?php echo get_post_meta( $item->ID, 'bed', true); ?> giường</span>
                                                     </div>
                                                     <div class="op">
-                                                        <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-profile.png" alt="">
+                                                        <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-profile.svg" alt="">
                                                         <span><?php echo get_post_meta( $item->ID, 'person', true); ?></span>
                                                     </div>
                                                 </div>
                                                 <div class="link-to-room">
                                                     <a href="<?php echo get_permalink($item->ID); ?>">Chi tiết phòng</a>
-                                                    <a href="<?php echo get_permalink($item->ID); ?>" class="">Đặt phòng <img src="<?php bloginfo('template_url'); ?>/asset/icons/arrow-right-black.png" alt=""></a>
+                                                    <a href="<?php echo home_url('/booking/'); ?>" class="">Đặt phòng này<img src="<?php bloginfo('template_url'); ?>/asset/icons/arrow-right-black.svg" alt=""></a>
                                                 </div>
                                             </div>
                                         </div>

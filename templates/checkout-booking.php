@@ -19,14 +19,16 @@ $qr_code = get_field('qr_code', 'option');
 $bank_name = get_field('bank_name', 'option');
 $acc_bank = get_field('acc_bank', 'option');
 $bank_fullname = get_field('bank_fullname', 'option');
-
+$hotline_footer = get_field('hotline_footer', 'option');
 ?>
 
     <div class="content-template-checkout-booking">
         <div class="custom-container">
-            <a href="" class="back-checkout">
-                <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-back.png" alt="">
-                Chỉnh sửa thông tin liên hệ</a>
+            <div style="display: inline-block">
+                <a href="" class="back-checkout">
+                    <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-back.svg" alt="">
+                    Chỉnh sửa thông tin liên hệ</a>
+            </div>
             <div class="content-checkout-booking">
                 <div class="left-content">
                     <h4 class="title">Thông tin đặt phòng</h4>
@@ -96,7 +98,7 @@ $bank_fullname = get_field('bank_fullname', 'option');
                                 <p>**Phí đặt trước sẽ được hoàn lại khi trả phòng</p>
                             </div>
                             <div class="total-mn">
-                                400.000 VND
+                                <?php echo getTotalMoneyDeposit($countRoom);?> VND
                             </div>
                         </div>
                     </div>
@@ -140,14 +142,15 @@ $bank_fullname = get_field('bank_fullname', 'option');
                         </div>
                         <div class="booking-success">
                             <div class="icon">
-                                <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-succes.png" alt="">
+                                <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-succes.svg" alt="">
                             </div>
                             <div class="text">
                                 Booking của bạn sẽ được xác nhận sau khi bạn thanh toán Phí đặt trước. Chúng tôi sẽ sớm liên hệ với bạn qua số điện thoại.
                             </div>
                         </div>
                         <div class="hotline-booking-success">
-                            Gọi Hotline <b>0238 3746 888</b>  để được hỗ trợ 24/7
+                            <img src="<?php bloginfo('template_url'); ?>/asset/icons/Icons.svg" alt="">
+                            Gọi Hotline <b><?php echo $hotline_footer; ?></b>  để được hỗ trợ 24/7
                         </div>
                     </div>
                 </div>

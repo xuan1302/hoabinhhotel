@@ -35,19 +35,19 @@ $map = get_field( "map" );
                 </h4>
                 <div class="list-tt">
                     <div class="item">
-                        <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-map-bl.png" alt="">
+                        <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-map-bl.svg" alt="">
                         <span><?php echo $address; ?></span>
                     </div>
                     <div class="item">
-                        <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-phone-bl.png" alt="">
+                        <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-phone-bl.svg" alt="">
                         <span><?php echo $hotline; ?></span>
                     </div>
                     <div class="item">
-                        <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-mail-bl.png" alt="">
+                        <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-mail-bl.svg" alt="">
                         <span><?php echo $email; ?></span>
                     </div>
                     <div class="item">
-                        <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-wb-bl.png" alt="">
+                        <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-wb-bl.svg" alt="">
                         <span><?php echo $web; ?></span>
                     </div>
                 </div>
