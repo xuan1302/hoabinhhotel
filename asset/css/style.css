@@ -1837,3 +1837,6 @@ input[type=number]::-webkit-outer-spin-button {
     height: 24px;
     background-image: url("../icons/icon-cicle-r.svg");
 }
+.main-navigation ul.menu li a:active, a.action-yellow-arr-right:active, #topbar a:active {
+    color: #fff;
+}

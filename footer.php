@@ -83,12 +83,6 @@ $link_facebook = get_field('link_facebook', 'option');
             </a>
         </li>
         <li>
-            <a href="mailto:<?php echo $email_footer; ?>" aria-label="email">
-                <img src="<?php bloginfo('template_url'); ?>/asset/icons/bxs_phone-2.svg"
-                     alt="" width="44px" height="44px">
-            </a>
-        </li>
-        <li>
             <a target="_blank" href="https://zalo.me/<?php echo $hotline_footer; ?>"
                aria-label="zalo">
                 <img src="<?php bloginfo('template_url'); ?>/asset/icons/bxs_phone-1.svg"
