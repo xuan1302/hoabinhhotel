@@ -79,7 +79,7 @@ $name_facebook = get_field('name_facebook', 'option');
                         </a>
                     </div>
                     <div class="item item-fb">
-                        <a href="<?php echo $hotline_topbar; ?>" target="_blank" class="item">
+                        <a href="<?php echo $link_facebook; ?>" target="_blank" class="item">
                             <span class="icon">
                                 <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-fb.svg" alt="">
                             </span>

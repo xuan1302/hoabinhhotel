@@ -86,6 +86,7 @@ $num_child = isset($_GET['children']) ? sanitize_text_field( $_GET['children'] )
                                 <input type="hidden" name="action" value="my_custom_form_action">
                                 <button type="button" class="btn-submit">
                                     <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-search.svg" alt="">
+                                    <span>Tìm phòng</span>
                                 </button>
                         </div>
                         </div>

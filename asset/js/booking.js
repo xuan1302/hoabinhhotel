@@ -86,7 +86,7 @@
             if (obj) {
                 obj.count = currentValue + 1;
             }
-            updateTotalRoom(listPostId);
+            updateTotalRoom(count_room);
             countTotalMoneyRoom();
             $('#posts').val(JSON.stringify(listPostId));
             $('#count_room').val(JSON.stringify(count_room));
@@ -117,7 +117,7 @@
                 listPostId = listPostId.filter(item => item !== id_post);
                 count_room = count_room.filter(item => item.id !== id_post);
             }
-            updateTotalRoom(listPostId);
+            updateTotalRoom(count_room);
             countTotalMoneyRoom();
             if(listPostId.length > 0){
                 $('.booking-n').prop('disabled', false);
@@ -173,8 +173,12 @@
         }
     }
     get_data_url();
-    function updateTotalRoom(listPostId = []){
-        $('#totalRoom').text(listPostId.length);
+    function updateTotalRoom(count_room = []){
+        let total = 0;
+        count_room.map(item => {
+            total += Number(item.count);
+        })
+        $('#totalRoom').text(total);
     }
     function countTotalMoneyRoom(){
         let total = 0;

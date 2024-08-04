@@ -191,6 +191,7 @@
     }
     .form-booking-home{
         margin: 0;
+        box-shadow: 0px 4px 8px 0px #00000014;
     }
     .form-booking-home .form-booking{
         flex-direction: column;
@@ -202,7 +203,7 @@
         border-radius: 4px;
     }
     .content-form-booking{
-        padding: 20px 0;
+        padding: 24px 0;
     }
     .form-booking button.btn-submit span{
         display: inline-block;
@@ -215,6 +216,7 @@
     .booking-f{
         background-color: #fff;
         box-shadow: 0px 4px 8px 0px #00000014;
+        padding: 0;
     }
     .item-room-booking{
         flex-direction: column;
