@@ -279,7 +279,7 @@ get_header();
                                         </div>
                                         <div class="link-to-room">
                                             <a href="<?php echo get_permalink($item->ID); ?>">Chi tiết phòng</a>
-                                            <a href="<?php echo get_permalink($item->ID); ?>" class="booking-link">ĐẶT PHÒNG NÀY <img src="<?php bloginfo('template_url'); ?>/asset/icons/arrow-right-black.png" alt=""></a>
+                                            <a href="<?php echo home_url('/booking/'); ?>" class="booking-link">ĐẶT PHÒNG NÀY <img src="<?php bloginfo('template_url'); ?>/asset/icons/arrow-right-black.png" alt=""></a>
                                         </div>
                                     </div>
                                 </div>

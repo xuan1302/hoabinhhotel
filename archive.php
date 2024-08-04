@@ -11,6 +11,12 @@ get_header();
 $term = get_queried_object();
 $banner = get_field( "banner", $term);
 $des = get_field( "description", $term );
+$args_system_room = array(
+    'post_type' => 'rooms',
+    'posts_per_page' => 5,
+    'post_status' => 'publish',
+);
+$myposts_system_room = get_posts($args_system_room);
 ?>
 
 	<main id="primary" class="site-main ">
@@ -59,7 +65,7 @@ $des = get_field( "description", $term );
 								<h1><?php echo the_title(); ?></h1>
 							</div>
 							<div class="entry-summary">
-								<?php the_excerpt(); ?>
+								<?php echo mb_strimwidth(get_the_excerpt(), 0, 85, '...'); ?>
 							</div>
 							<div class="readmore-block">
 								<a href="<?php echo esc_url(get_the_permalink($post->ID)); ?>" class="entry-readmore">
@@ -84,6 +90,96 @@ $des = get_field( "description", $term );
             		</div>
 				</div>
 			</div>
+            <?php
+            if($myposts_system_room) { ?>
+                <div class="section-system-room">
+                    <div class="system-room-container">
+                        <h3 class="title">Hệ thống phòng nghỉ</h3>
+                        <div class="list-system-rooms swiper">
+                            <div class="swiper-wrapper room-wrapper">
+                                <?php
+                                foreach ($myposts_system_room as $item) { ?>
+                                    <div class="swiper-slide item item-room">
+                                        <div class="img">
+                                            <div class="thumbnail">
+                                                <a href="<?php echo get_permalink($item->ID); ?>">
+                                                    <?php
+                                                    echo get_the_post_thumbnail($item->ID,'blog-thumbnail');
+                                                    ?>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="content">
+                                            <a href="<?php echo get_permalink($item->ID); ?>">
+                                                <h4 class="title-post"><?php echo get_the_title($item->ID); ?></h4>
+                                            </a>
+                                            <div class="price">
+                                                <p>
+                                                    <?php
+                                                    $number = get_field( 'price', $item->ID );
+                                                    if ($number) {
+                                                        $formatted_number = number_format($number, 0, '', '.');
+                                                        echo 'Từ ' . $formatted_number . ' VND/đêm';
+                                                    }
+                                                    ?>
+                                                </p>
+                                            </div>
+                                            <div class="option-room">
+                                                <div class="op">
+                                                    <?php
+                                                    $area = get_field( 'area', $item->ID );
+                                                    if ($area) {
+                                                        ?>
+                                                        <div class="utilities">
+                                                            <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon_area.svg" alt="">
+                                                            <?php echo $area.'m2'; ?>
+                                                        </div>
+                                                        <?php
+                                                    }
+                                                    ?>
+                                                </div>
+                                                <div class="op">
+                                                    <?php
+                                                    $bed = get_field( 'bed', $item->ID );
+                                                    if ($bed) {
+                                                        ?>
+                                                        <div class="utilities">
+                                                            <img src="<?php bloginfo('template_url'); ?>/asset/icons/lucide_bed-single.svg" alt="">
+                                                            <?php echo $bed . ' giường'; ?>
+                                                        </div>
+                                                        <?php
+                                                    }
+                                                    ?>
+                                                </div>
+                                                <div class="op">
+                                                    <?php
+                                                    $person = get_field( 'person', $item->ID );
+                                                    if ($person) {
+                                                        ?>
+                                                        <div class="utilities">
+                                                            <img src="<?php bloginfo('template_url'); ?>/asset/icons/Icons-person.svg" alt="">
+                                                            <?php echo $person; ?>
+                                                        </div>
+                                                        <?php
+                                                    }
+                                                    ?>
+                                                </div>
+                                            </div>
+                                            <div class="link-to-room">
+                                                <a href="<?php echo get_permalink($item->ID); ?>">Chi tiết phòng</a>
+                                                <a href="<?php echo home_url('/booking/'); ?>" class="booking-link">ĐẶT PHÒNG NÀY <img src="<?php bloginfo('template_url'); ?>/asset/icons/arrow-right-black.png" alt=""></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <?php }
+                                ?>
+                            </div>
+                        </div>
+                        <div class="room-pagination"></div>
+                    </div>
+                </div>
+            <?php }
+            ?>
 
 			<?php
 

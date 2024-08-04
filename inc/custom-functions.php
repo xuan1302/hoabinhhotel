@@ -205,7 +205,7 @@ if ( !function_exists( 'related_posts' ) ){
                                             <h1><?php echo the_title(); ?></h1>
                                         </div>
                                         <div class="entry-summary">
-								            <?php the_excerpt(); ?>
+                                            <?php echo mb_strimwidth(get_the_excerpt(), 0, 85, '...'); ?>
 							            </div>
                                         <div class="readmore-block">
                                             <a href="<?php echo esc_url(get_the_permalink($post->ID)); ?>" class="entry-readmore">
