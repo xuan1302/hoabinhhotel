@@ -1600,7 +1600,7 @@ input[type=number]::-webkit-outer-spin-button {
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
     border-radius: 100%;
-    border: 5px solid #C19D68;
+    border: 5px solid #AC000066;
     opacity: 1;
     -webkit-animation: quick-alo-circle-anim 1.2s infinite ease-in-out;
     -moz-animation: quick-alo-circle-anim 1.2s infinite ease-in-out;
