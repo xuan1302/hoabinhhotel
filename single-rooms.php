@@ -118,6 +118,7 @@ $list_image_room = get_field( "image_room" );
                                 <input type="hidden" name="action" value="my_custom_form_action">
                                 <button type="submit" class="btn-submit">
                                     <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-search.png" alt="">
+                                    <span>Tìm phòng</span>
                                 </button>
                             </div>
                         </div>
@@ -397,7 +398,7 @@ $list_image_room = get_field( "image_room" );
                                                 </div>
                                                 <div class="link-to-room">
                                                     <a href="<?php echo get_permalink($item->ID); ?>">Chi tiết phòng</a>
-                                                    <a href="<?php echo get_permalink($item->ID); ?>" class="booking-link">ĐẶT PHÒNG NÀY <img src="<?php bloginfo('template_url'); ?>/asset/icons/arrow-right-black.png" alt=""></a>
+                                                    <a href="<?php echo home_url('/booking/'); ?>" class="booking-link">ĐẶT PHÒNG NÀY <img src="<?php bloginfo('template_url'); ?>/asset/icons/arrow-right-black.png" alt=""></a>
                                                 </div>
                                             </div>
                                         </div>
