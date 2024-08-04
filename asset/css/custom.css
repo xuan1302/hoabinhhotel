@@ -586,4 +586,15 @@
     .section-list-image-room .list-image-room img{
         height: 210px;
     }
+    .single-room-page .form-booking {
+        flex-direction: column;
+        gap: 24px;
+        align-items: initial;
+    }
+    .single-room-page .booking-f{
+        padding: 24px 0;
+    }
+    .single-room-page .content-form-booking{
+        padding: 0;
+    }
 }
