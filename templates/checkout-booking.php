@@ -59,27 +59,27 @@ $hotline_footer = get_field('hotline_footer', 'option');
                     <div class="info-booking">
                         <div class="item">
                             <label>Ngày đến</label>
-                            <b><?php echo $fromDate; ?></b>
+                            <b id="fromDate"><?php echo $fromDate; ?></b>
                         </div>
                         <div class="item">
                             <label>Ngày về</label>
-                            <b><?php echo $toDate; ?></b>
+                            <b id="toDate"><?php echo $toDate; ?></b>
                         </div>
                         <div class="item">
                             <label>Đêm</label>
-                            <b><?php echo diffDate($fromDate,$toDate); ?></b>
+                            <b id=""><?php echo diffDate($fromDate,$toDate); ?></b>
                         </div>
                         <div class="item">
                             <label>Số lượng phòng</label>
-                            <b><?php echo count($countRoom); ?></b>
+                            <b id="numberRoom"><?php echo count($countRoom); ?></b>
                         </div>
                         <div class="item">
                             <label>Người lớn</label>
-                            <b><?php echo $num_adult; ?></b>
+                            <b id="adult"><?php echo $num_adult; ?></b>
                         </div>
                         <div class="item">
                             <label>Trẻ em</label>
-                            <b><?php echo $num_child; ?></b>
+                            <b id="child"><?php echo $num_child; ?></b>
                         </div>
                     </div>
                     <div class="info-bottom">
@@ -88,7 +88,7 @@ $hotline_footer = get_field('hotline_footer', 'option');
                                 <p>Giá tạm tính*</p>
                                 <p>*Thanh toán khi trả phòng</p>
                             </div>
-                            <div class="total-mn">
+                            <div class="total-mn" id="totalMoney">
                                 <?php echo getTotalMoney($countRoom, diffDate($fromDate,$toDate) );?> VND
                             </div>
                         </div>
@@ -97,62 +97,67 @@ $hotline_footer = get_field('hotline_footer', 'option');
                                 <p>Phí đặt trước* **</p>
                                 <p>**Phí đặt trước sẽ được hoàn lại khi trả phòng</p>
                             </div>
-                            <div class="total-mn">
+                            <div class="total-mn" id="deponsive">
                                 <?php echo getTotalMoneyDeposit($countRoom);?> VND
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="right-content">
-                    <div class="form-content-right">
-                        <h4 class="title">Điền thông tin liên hệ</h4>
-                        <?php echo do_shortcode($shortcode); ?>
-                    </div>
-                    <div class="info-prepayment">
-                        <h4 class="title">Thông tin thanh toán Phí đặt trước</h4>
-                        <div class="acc-bank">
-                            <div class="qr-code">
-                                <img src="<?php echo $qr_code['url']; ?>" alt="">
-                                <div class="info-bank">
-                                    <div class="content-info-bank">
-                                        <div class="item">
-                                            <label>Tên ngân hàng</label>
-                                            <b><?php echo $bank_name; ?></b>
-                                        </div>
-                                        <div class="item">
-                                            <label>Số tài khoản</label>
-                                            <b><?php echo $acc_bank; ?></b>
-                                        </div>
-                                        <div class="item">
-                                            <label>Tên chủ tài khoản</label>
-                                            <b><?php echo $bank_fullname; ?></b>
+                    <?php
+                        if(isset($_GET['formSubmitted'])){ ?>
+                            <div class="info-prepayment">
+                                <h4 class="title">Thông tin thanh toán Phí đặt trước</h4>
+                                <div class="acc-bank">
+                                    <div class="qr-code">
+                                        <img src="<?php echo $qr_code['url']; ?>" alt="">
+                                        <div class="info-bank">
+                                            <div class="content-info-bank">
+                                                <div class="item">
+                                                    <label>Tên ngân hàng</label>
+                                                    <b><?php echo $bank_name; ?></b>
+                                                </div>
+                                                <div class="item">
+                                                    <label>Số tài khoản</label>
+                                                    <b><?php echo $acc_bank; ?></b>
+                                                </div>
+                                                <div class="item">
+                                                    <label>Tên chủ tài khoản</label>
+                                                    <b><?php echo $bank_fullname; ?></b>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="note">
+                                    <h5>LƯU Ý: </h5>
+                                    <ul>
+                                        <li>Nội dung chuyển khoản ghi số điện thoại đã điền ở thông tin liên hệ.</li>
+                                        <li>Chuyển chính xác số tiền Phí đặt trước được ghi ở cột bên phải.</li>
+                                        <li>Phí đặt trước sẽ được hoàn lại khi trả phòng.</li>
+                                        <li>Tiền Phí đặt trước sẽ không được hoàn lại khi khách hủy đặt phòng. </li>
+                                    </ul>
+                                </div>
+                                <div class="booking-success">
+                                    <div class="icon">
+                                        <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-succes.svg" alt="">
+                                    </div>
+                                    <div class="text">
+                                        Booking của bạn sẽ được xác nhận sau khi bạn thanh toán Phí đặt trước. Chúng tôi sẽ sớm liên hệ với bạn qua số điện thoại.
+                                    </div>
+                                </div>
+                                <div class="hotline-booking-success">
+                                    <img src="<?php bloginfo('template_url'); ?>/asset/icons/Icons.svg" alt="">
+                                    Gọi Hotline <b><?php echo $hotline_footer; ?></b>  để được hỗ trợ 24/7
+                                </div>
                             </div>
-                        </div>
-                        <div class="note">
-                            <h5>LƯU Ý: </h5>
-                            <ul>
-                                <li>Nội dung chuyển khoản ghi số điện thoại đã điền ở thông tin liên hệ.</li>
-                                <li>Chuyển chính xác số tiền Phí đặt trước được ghi ở cột bên phải.</li>
-                                <li>Phí đặt trước sẽ được hoàn lại khi trả phòng.</li>
-                                <li>Tiền Phí đặt trước sẽ không được hoàn lại khi khách hủy đặt phòng. </li>
-                            </ul>
-                        </div>
-                        <div class="booking-success">
-                            <div class="icon">
-                                <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-succes.svg" alt="">
+                        <?php } else { ?>
+                            <div class="form-content-right">
+                                <h4 class="title">Điền thông tin liên hệ</h4>
+                                <?php echo do_shortcode($shortcode); ?>
                             </div>
-                            <div class="text">
-                                Booking của bạn sẽ được xác nhận sau khi bạn thanh toán Phí đặt trước. Chúng tôi sẽ sớm liên hệ với bạn qua số điện thoại.
-                            </div>
-                        </div>
-                        <div class="hotline-booking-success">
-                            <img src="<?php bloginfo('template_url'); ?>/asset/icons/Icons.svg" alt="">
-                            Gọi Hotline <b><?php echo $hotline_footer; ?></b>  để được hỗ trợ 24/7
-                        </div>
-                    </div>
+                        <?php }
+                    ?>
                 </div>
             </div>
         </div>

@@ -8,10 +8,15 @@ $args_system_room = array(
     'post_type' => 'rooms',
     'post_status' => 'publish',
 );
+$today = new DateTime();
+$tomorrow = clone $today;
+$tomorrow->add(new DateInterval('P1D'));
+$todayFormatted = $today->format('d/m/Y');
+$tomorrowFormatted = $tomorrow->format('d/m/Y');
 $myposts_system_room = get_posts($args_system_room);
-$range_date = isset($_GET['range_date']) ? sanitize_text_field( $_GET['range_date'] ) : '';
-$num_adult = isset($_GET['adults']) ? sanitize_text_field( $_GET['adults'] ) : '';
-$num_child = isset($_GET['children']) ? sanitize_text_field( $_GET['children'] ) : '';
+$range_date = isset($_GET['range_date']) ? sanitize_text_field( $_GET['range_date'] ) : $todayFormatted . '-' . $tomorrowFormatted;
+$num_adult = isset($_GET['adults']) ? sanitize_text_field( $_GET['adults'] ) : 1;
+$num_child = isset($_GET['children']) ? sanitize_text_field( $_GET['children'] ) : 0;
 ?>
 
     <div class="content-template-booking">

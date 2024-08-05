@@ -9,7 +9,7 @@ $bg_service = get_field( "backgound_service" );
 $bg_abous = get_field( "backgound_abous" );
 $link_all_post = get_field( "link_all_post" );
 $shortcode_review = get_field( "shortcode_review" );
-
+$link_map = get_field('link_map', 'option');
 $args_system_room = array(
     'post_type' => 'rooms',
 //    'posts_per_page' => 5,
@@ -225,7 +225,11 @@ $myposts_experience = get_posts( $args_experience );
             if($shortcode_review){ ?>
                 <div class="home-review">
                     <div class="custom-container">
+                        <h3 class="title">Khách hàng nói về Hòa Bình Hotel</h3>
                         <?php echo do_shortcode($shortcode_review); ?>
+                        <div class="text-center">
+                            <a class="ti-header-write-btn" target="_blank" href="<?php echo $link_map; ?>">Để lại đánh giá</a>
+                        </div>
                     </div>
                 </div>
             <?php }
