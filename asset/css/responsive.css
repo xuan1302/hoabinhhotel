@@ -235,6 +235,9 @@
     .admin-bar #masthead{
         top: 90px;
     }
+    .change-number-person{
+        top: 40px;
+    }
 }
 @media only screen and (max-width: 575px) {
     .form-info-lh .col-3,
