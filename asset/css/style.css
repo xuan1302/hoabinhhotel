@@ -1284,7 +1284,7 @@ a.action-arrow-right-blue{
     background: #fff;
     border-radius: 8px;
     width: 300px;
-    z-index: 9;
+    z-index: 99;
     border: 1px solid #ddd;
 }
 .change-number-person .list-item{
@@ -1545,6 +1545,9 @@ input[type=number]::-webkit-outer-spin-button {
     display: flex;
     align-items: center;
     gap: 10px;
+    color: #353535;
+}
+.list-tt .item a{
     color: #353535;
 }
 .content-contact .custom-container{
@@ -1843,7 +1846,7 @@ a.action-yellow-arr-right:active,
 .main-navigation ul.menu li a:focus, a.action-yellow-arr-right:focus, #topbar a:focus {
     color: #fff;
 }
-.wpcf7-response-output{
+.content-template-checkout-booking .wpcf7-response-output{
     display: none;
 }
 .home-review .title{
