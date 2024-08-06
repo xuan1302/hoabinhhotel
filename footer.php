@@ -24,7 +24,11 @@ $link_facebook = get_field('link_facebook', 'option');
 ?>
 	<footer id="colophon" class="site-footer">
 		<div class="footer-top" style="background-image: url(<?php echo $backgound_footer_top['url']; ?>);">
-            <div class="custom-container">
+            <div class="custom-container"
+                 data-aos="fade-down"
+                 data-aos-duration="1000"
+                 data-aos-easing="ease-in-sine"  data-aos-delay="50"
+            >
                 <div class="banner-footer-top" style="background-image: url(<?php echo $backgound_footer_content['url']; ?>);">
                     <div class="content-footer-top row">
                         <div class="left-ft-top col-md-8">

@@ -39,7 +39,11 @@ $list_image_room = get_field( "image_room" );
 
     <main id="primary" class="site-main single-room-page">
         <div class="single-banner" style="background-image: url(<?php echo $banner['url']; ?>)">
-            <div class="banner-contain">
+            <div class="banner-contain"
+                 data-aos="fade-down"
+                 data-aos-duration="1000"
+                 data-aos-easing="ease-in-sine"  data-aos-delay="50"
+            >
                 <div class="category-name">
                     <?php
                     the_category(', ');
@@ -54,7 +58,11 @@ $list_image_room = get_field( "image_room" );
             </div>
         </div>
         <form action="<?php echo esc_url(admin_url('admin-post.php')); ?>" method="post">
-            <div class="booking-f">
+            <div class="booking-f"
+                 data-aos="fade-down"
+                 data-aos-duration="1000"
+                 data-aos-easing="ease-in-sine"  data-aos-delay="50"
+            >
                 <div class="">
                     <div class="container">
                         <div class="content-form-booking">
@@ -131,12 +139,20 @@ $list_image_room = get_field( "image_room" );
                 <div class="section-content-room container-fluid">
                     <div class="contain row">
                         <div class="col-12">
-                            <div class="section-content">
+                            <div class="section-content"
+                                 data-aos="fade-down"
+                                 data-aos-duration="1000"
+                                 data-aos-easing="ease-in-sine"  data-aos-delay="50"
+                            >
                                 <?php
                                 the_content();
                                 ?>
                             </div>
-                            <div class="section-price">
+                            <div class="section-price"
+                                 data-aos="fade-down"
+                                 data-aos-duration="1000"
+                                 data-aos-easing="ease-in-sine"  data-aos-delay="50"
+                            >
                                 <h1>GIÁ PHÒNG</h1>
                                 <p>
                                     <?php
@@ -150,7 +166,11 @@ $list_image_room = get_field( "image_room" );
                         </div>
                     </div>
                 </div>
-                <div class="section-list-image-room">
+                <div class="section-list-image-room"
+                     data-aos="fade-down"
+                     data-aos-duration="1000"
+                     data-aos-easing="ease-in-sine"  data-aos-delay="50"
+                >
                     <div class="list-image-room swiper">
                         <div class="swiper-wrapper">
                             <?php
@@ -168,7 +188,11 @@ $list_image_room = get_field( "image_room" );
                     </div>
                     <div class="image-room-pagination"></div>
                 </div>
-                <div class="utilities-contain">
+                <div class="utilities-contain"
+                     data-aos="fade-down"
+                     data-aos-duration="1000"
+                     data-aos-easing="ease-in-sine"  data-aos-delay="50"
+                >
                     <div class="section-utilities container">
                         <div class="utilities-inner">
                             <h1>Tính năng phòng</h1>
@@ -291,7 +315,11 @@ $list_image_room = get_field( "image_room" );
                 </div>
                 <div class="section-service-rules container-fluid">
                     <div class="row section-rules-contain">
-                        <div class="col-xl-6 col-12 rule-wrapper">
+                        <div class="col-xl-6 col-12 rule-wrapper"
+                             data-aos="fade-right"
+                             data-aos-duration="1000"
+                             data-aos-easing="ease-in-sine"  data-aos-delay="50"
+                        >
                             <div class="contain">
                                 <h1>Điều khoản & Dịch vụ</h1>
                                 <ol>
@@ -307,7 +335,11 @@ $list_image_room = get_field( "image_room" );
                                 </ol>
                             </div>
                         </div>
-                        <div class="col-xl-6 col-12">
+                        <div class="col-xl-6 col-12"
+                             data-aos="fade-left"
+                             data-aos-duration="1000"
+                             data-aos-easing="ease-in-sine"  data-aos-delay="50"
+                        >
                             <div class="contain">
                                 <h1>Các bước đặt phòng</h1>
                                 <ol>
@@ -327,7 +359,11 @@ $list_image_room = get_field( "image_room" );
                 </div>
                 <?php
                 if($myposts_system_room) { ?>
-                    <div class="section-system-room">
+                    <div class="section-system-room"
+                         data-aos="fade-down"
+                         data-aos-duration="1000"
+                         data-aos-easing="ease-in-sine"  data-aos-delay="50"
+                    >
                         <div class="system-room-container">
                             <h3 class="title">Hệ thống phòng nghỉ</h3>
                             <div class="list-system-rooms swiper">

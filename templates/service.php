@@ -29,7 +29,11 @@ get_header();
 ?>
 <div class="template-service">
     <section class="single-banner" style="background-image: url(<?php echo $banner['url']; ?>)">
-        <div class="banner-contain">
+        <div class="banner-contain"
+             data-aos="fade-down"
+             data-aos-duration="1000"
+             data-aos-easing="ease-in-sine"  data-aos-delay="50"
+        >
             <div class="single-title">
                 <h1><?php the_title()?></h1>
             </div>
@@ -42,7 +46,11 @@ get_header();
         <section class="organizing-wedding">
             <div class="container-fluid">
                 <div class="row top-contain">
-                    <div class="section-left col-xl-5 col-12">
+                    <div class="section-left col-xl-5 col-12"
+                         data-aos="fade-right"
+                         data-aos-duration="1000"
+                         data-aos-easing="ease-in-sine"  data-aos-delay="50"
+                    >
                         <div class="inner">
                             <h2 class="title"><?php echo $title_1 ?></h2>
                             <h2 class="main-title"><?php echo $main_title_1 ?></h2>
@@ -52,11 +60,19 @@ get_header();
                             </a>
                         </div>
                     </div>
-                    <div class="section-right col-xl-7 col-12">
+                    <div class="section-right col-xl-7 col-12"
+                         data-aos="fade-left"
+                         data-aos-duration="1000"
+                         data-aos-easing="ease-in-sine"  data-aos-delay="50"
+                    >
                         <img  class="image" src="<?php echo $image_1['url']?>" />
                     </div>
                 </div>
-                <div class="row image-organizing-wedding">
+                <div class="row image-organizing-wedding"
+                     data-aos="fade-down"
+                     data-aos-duration="1000"
+                     data-aos-easing="ease-in-sine"  data-aos-delay="50"
+                >
                     <?php
                         if($list_image_1){
                             foreach($list_image_1 as $item){
@@ -72,7 +88,11 @@ get_header();
                      ?>
                 </div>
             </div>
-            <div class="organizing-wedding-mobile">
+            <div class="organizing-wedding-mobile"
+                 data-aos="fade-down"
+                 data-aos-duration="1000"
+                 data-aos-easing="ease-in-sine"  data-aos-delay="50"
+            >
                 <div class="swiper slide-organizing-wedding-mobile">
                     <div class="swiper-wrapper">
                         <?php
@@ -97,10 +117,18 @@ get_header();
         <section class="conference-organization">
             <div class="container-fluid">
                 <div class="row top-contain">
-                    <div class="section-left col-xl-7 col-12">
+                    <div class="section-left col-xl-7 col-12"
+                         data-aos="fade-right"
+                         data-aos-duration="1000"
+                         data-aos-easing="ease-in-sine"  data-aos-delay="50"
+                    >
                         <img  class="image" src="<?php echo $image_2['url']?>" />
                     </div>
-                    <div class="section-right col-xl-5 col-12">
+                    <div class="section-right col-xl-5 col-12"
+                         data-aos="fade-left"
+                         data-aos-duration="1000"
+                         data-aos-easing="ease-in-sine"  data-aos-delay="50"
+                    >
                         <div class="inner">
                             <h2 class="title"><?php echo $title_2 ?></h2>
                             <h2 class="main-title"><?php echo $main_title_2 ?></h2>
@@ -111,7 +139,11 @@ get_header();
                         </div>
                     </div>
                 </div>
-                <div class="row list-image-conference-organization">
+                <div class="row list-image-conference-organization"
+                     data-aos="fade-down"
+                     data-aos-duration="1000"
+                     data-aos-easing="ease-in-sine"  data-aos-delay="50"
+                >
                     <?php
                         if($list_image_2){
                             foreach($list_image_2 as $item){
@@ -127,7 +159,11 @@ get_header();
                      ?>   
                 </div>
             </div>
-            <div class="conference-organization-mobile">
+            <div class="conference-organization-mobile"
+                 data-aos="fade-down"
+                 data-aos-duration="1000"
+                 data-aos-easing="ease-in-sine"  data-aos-delay="50"
+            >
                 <div class="swiper slide-conference-organization-mobile">
                     <div class="swiper-wrapper">
                         <?php
@@ -151,7 +187,11 @@ get_header();
         <section class="entertainment-service">
             <div class="container-fluid">
                 <div class="row top-contain">
-                    <div class="section-left col-xl-5 col-12">
+                    <div class="section-left col-xl-5 col-12"
+                         data-aos="fade-right"
+                         data-aos-duration="1000"
+                         data-aos-easing="ease-in-sine"  data-aos-delay="50"
+                    >
                         <div class="inner">
                             <h2 class="title"><?php echo $title_1 ?></h2>
                             <h2 class="main-title"><?php echo $main_title_1 ?></h2>
@@ -161,11 +201,19 @@ get_header();
                             </a>
                         </div>
                     </div>
-                    <div class="section-right col-xl-7 col-12">
+                    <div class="section-right col-xl-7 col-12"
+                         data-aos="fade-left"
+                         data-aos-duration="1000"
+                         data-aos-easing="ease-in-sine"  data-aos-delay="50"
+                    >
                         <img  class="image" src="<?php echo $image_1['url']?>" />
                     </div>
                 </div>
-                <div class="row image-entertainment-service">
+                <div class="row image-entertainment-service"
+                     data-aos="fade-down"
+                     data-aos-duration="1000"
+                     data-aos-easing="ease-in-sine"  data-aos-delay="50"
+                >
                     <?php
                         if($list_image_1){
                             foreach($list_image_1 as $item){
@@ -204,7 +252,11 @@ get_header();
         </section>
         <?php
         if($myposts_system_room) { ?>
-            <div class="section-system-room">
+            <div class="section-system-room"
+                 data-aos="fade-down"
+                 data-aos-duration="1000"
+                 data-aos-easing="ease-in-sine"  data-aos-delay="50"
+            >
                 <div class="system-room-container">
                     <h3 class="title">Hệ thống phòng nghỉ</h3>
                     <div class="list-system-rooms swiper">

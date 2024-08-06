@@ -18,23 +18,43 @@ $description = get_field("des");
             <div class="row">
                 <div class="single-content col-12">
                     <div class="banner">
-                        <div class="category-name">
+                        <div class="category-name"
+                             data-aos="fade-down"
+                             data-aos-duration="1000"
+                             data-aos-easing="ease-in-sine"  data-aos-delay="50"
+                        >
                             <?php
                             the_category(', ');
                             ?>
                         </div>
-                        <div class="single-title">
+                        <div class="single-title"
+                             data-aos="fade-down"
+                             data-aos-duration="1000"
+                             data-aos-easing="ease-in-sine"  data-aos-delay="50"
+                        >
                            <h1><?php the_title()?></h1>
                         </div>
-                        <div class="date">
+                        <div class="date"
+                             data-aos="fade-down"
+                             data-aos-duration="1000"
+                             data-aos-easing="ease-in-sine"  data-aos-delay="50"
+                        >
                             <p><?php echo get_the_date( 'd-m-Y' ); ?>
                             <span>- by Hoa Binh Hotel</span></p>
                         </div>
                     </div>
-                    <div class="description-single">
+                    <div class="description-single"
+                         data-aos="fade-down"
+                         data-aos-duration="1000"
+                         data-aos-easing="ease-in-sine"  data-aos-delay="50"
+                    >
                         <p><?php echo $description ?></p>
                     </div>
-                    <div class="inner-content">
+                    <div class="inner-content"
+                         data-aos="fade-down"
+                         data-aos-duration="1000"
+                         data-aos-easing="ease-in-sine"  data-aos-delay="50"
+                    >
                         <?php
                         the_content();
                         ?>
@@ -50,7 +70,11 @@ $description = get_field("des");
 
     </main>
     <!-- #main -->
-    <div class="related-post">
+    <div class="related-post"
+         data-aos="fade-down"
+         data-aos-duration="1000"
+         data-aos-easing="ease-in-sine"  data-aos-delay="50"
+    >
         <?php  related_posts() ?>
     </div>
 

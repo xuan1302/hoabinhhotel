@@ -25,7 +25,11 @@ $myposts_system_room = get_posts($args_system_room);
 
 			<header class="page-header">
                 <div class="single-banner" style="background-image: url(<?php echo $banner['url']; ?>)">
-                    <div class="banner-contain">
+                    <div class="banner-contain"
+                         data-aos="fade-down"
+                         data-aos-duration="1000"
+                         data-aos-easing="ease-in-sine"  data-aos-delay="50"
+                    >
                         <div class="category-name">
                             <?php
                             the_category(', ');
@@ -37,7 +41,11 @@ $myposts_system_room = get_posts($args_system_room);
                     </div>
                 </div>
 			</header><!-- .page-header -->
-			<div class="archive-contain container-fluid">
+			<div class="archive-contain container-fluid"
+                 data-aos="fade-down"
+                 data-aos-duration="1000"
+                 data-aos-easing="ease-in-sine"  data-aos-delay="50"
+            >
 				<div class="content">
 					<div class="row">
 			<?php
@@ -92,7 +100,11 @@ $myposts_system_room = get_posts($args_system_room);
 			</div>
             <?php
             if($myposts_system_room) { ?>
-                <div class="section-system-room">
+                <div class="section-system-room"
+                     data-aos="fade-down"
+                     data-aos-duration="1000"
+                     data-aos-easing="ease-in-sine"  data-aos-delay="50"
+                >
                     <div class="system-room-container">
                         <h3 class="title">Hệ thống phòng nghỉ</h3>
                         <div class="list-system-rooms swiper">
