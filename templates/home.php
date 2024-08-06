@@ -27,7 +27,11 @@ $myposts_experience = get_posts( $args_experience );
     <div class="template-home-custom">
         <?php
             if($home_slide) { ?>
-                <div class="home-slide">
+                <div class="home-slide"
+                     data-aos="fade-down"
+                     data-aos-duration="1000"
+                     data-aos-easing="ease-in-sine"  data-aos-delay="50"
+                >
                     <div class="swiper slide-home">
                         <div class="swiper-wrapper">
                             <?php
@@ -49,7 +53,11 @@ $myposts_experience = get_posts( $args_experience );
                     </div>
                 </div>
             <?php } ?>
-            <div class="form-booking-home">
+            <div class="form-booking-home"
+                 data-aos="fade-up"
+                 data-aos-duration="1000"
+                 data-aos-easing="ease-in-sine"  data-aos-delay="50"
+            >
                 <div class="container">
                     <div class="content-form-booking">
                         <form action="<?php echo esc_url(admin_url('admin-post.php')); ?>" method="post">
@@ -125,10 +133,18 @@ $myposts_experience = get_posts( $args_experience );
                 <div class="about-us-home" style="background-image: url(<?php echo $bg_abous['url']; ?>);">
                     <div class="container">
                         <div class="content">
-                            <div class="left-col">
+                            <div class="left-col"
+                                 data-aos="fade-right"
+                                 data-aos-duration="1000"
+                                 data-aos-easing="ease-in-sine"  data-aos-delay="50"
+                            >
                                 <img src="<?php echo $abous[0]['thumbnail']['url']; ?>" alt="">
                             </div>
-                            <div class="right-col">
+                            <div class="right-col"
+                                 data-aos="fade-left"
+                                 data-aos-duration="1000"
+                                 data-aos-easing="ease-in-sine"  data-aos-delay="50"
+                            >
                                 <h4><?php echo $abous[0]['subtitle']; ?></h4>
                                 <h5><?php echo $abous[0]['title']; ?></h5>
                                 <div class="des"><?php echo $abous[0]['content']; ?></div>
@@ -142,8 +158,16 @@ $myposts_experience = get_posts( $args_experience );
             if($myposts_system_room) { ?>
                 <div class="system-room">
                     <div class="custom-container">
-                        <h3 class="title">Hệ thông phòng nghỉ</h3>
-                        <div class="list-post-system">
+                        <h3 class="title"
+                            data-aos="fade-down"
+                            data-aos-duration="1000"
+                            data-aos-easing="ease-in-sine"  data-aos-delay="50"
+                        >Hệ thông phòng nghỉ</h3>
+                        <div class="list-post-system"
+                             data-aos="fade-up"
+                             data-aos-duration="1000"
+                             data-aos-easing="ease-in-sine"  data-aos-delay="50"
+                        >
                             <div class="row">
                                 <?php
                                     foreach ($myposts_system_room as $item) {
@@ -197,11 +221,19 @@ $myposts_experience = get_posts( $args_experience );
             if($service) { ?>
                 <div class="service" style="background-image: url(<?php echo $bg_service['url']; ?>);">
                     <div class="custom-container">
-                        <h3 class="title">Các dịch vụ</h3>
+                        <h3 class="title"
+                            data-aos="fade-down"
+                            data-aos-duration="1000"
+                            data-aos-easing="ease-in-sine"  data-aos-delay="50"
+                        >Các dịch vụ</h3>
                         <div class="list-service">
                             <?php
                                 foreach ($service as $value){ ?>
-                                    <div class="item">
+                                    <div class="item"
+                                         data-aos="fade-up"
+                                         data-aos-duration="1000"
+                                         data-aos-easing="ease-in-sine"  data-aos-delay="50"
+                                    >
                                         <div class="img-service">
                                             <img src="<?php echo $value['thumbnail']['url']; ?>" alt="">
                                         </div>
@@ -225,9 +257,23 @@ $myposts_experience = get_posts( $args_experience );
             if($shortcode_review){ ?>
                 <div class="home-review">
                     <div class="custom-container">
-                        <h3 class="title">Khách hàng nói về Hòa Bình Hotel</h3>
-                        <?php echo do_shortcode($shortcode_review); ?>
-                        <div class="text-center">
+                        <h3 class="title"
+                            data-aos="fade-down"
+                            data-aos-duration="1000"
+                            data-aos-easing="ease-in-sine"  data-aos-delay="50"
+                        >Khách hàng nói về Hòa Bình Hotel</h3>
+                        <div
+                                data-aos="fade-up"
+                                data-aos-duration="1000"
+                                data-aos-easing="ease-in-sine"  data-aos-delay="50"
+                        >
+                            <?php echo do_shortcode($shortcode_review); ?>
+                        </div>
+                        <div class="text-center"
+                             data-aos="fade-down"
+                             data-aos-duration="1000"
+                             data-aos-easing="ease-in-sine"  data-aos-delay="50"
+                        >
                             <a class="ti-header-write-btn" target="_blank" href="<?php echo $link_map; ?>">Để lại đánh giá</a>
                         </div>
                     </div>
@@ -236,8 +282,16 @@ $myposts_experience = get_posts( $args_experience );
 
             if($images_hotel){ ?>
                     <div id="list-img-hotel">
-                        <h3 class="title">Hình ảnh khách sạn</h3>
-                        <div class="swiper mySwiper">
+                        <h3 class="title"
+                            data-aos="fade-down"
+                            data-aos-duration="1000"
+                            data-aos-easing="ease-in-sine"  data-aos-delay="50"
+                        >Hình ảnh khách sạn</h3>
+                        <div class="swiper mySwiper"
+                             data-aos="fade-up"
+                             data-aos-duration="1000"
+                             data-aos-easing="ease-in-sine"  data-aos-delay="50"
+                        >
                             <div class="swiper-wrapper">
                                 <?php
                                     foreach ($images_hotel as $item) { ?>
@@ -255,11 +309,19 @@ $myposts_experience = get_posts( $args_experience );
             if($myposts_experience) { ?>
                 <div class="posts-experience">
                     <div class="custom-container">
-                        <div class="title">
+                        <div class="title"
+                             data-aos="fade-down"
+                             data-aos-duration="1000"
+                             data-aos-easing="ease-in-sine"  data-aos-delay="50"
+                        >
                             <h3>Tin tức & Trải nghiệm</h3>
                             <a href="<?php echo $link_all_post; ?>" class="action-arrow-right-blue">Xem tất cả bài viết</a>
                         </div>
-                        <div class="list-post hide-mobile">
+                        <div class="list-post hide-mobile"
+                             data-aos="fade-up"
+                             data-aos-duration="1000"
+                             data-aos-easing="ease-in-sine"  data-aos-delay="50"
+                        >
                             <div class="row">
                                 <?php
                                     foreach ($myposts_experience as $item) { ?>
@@ -283,7 +345,10 @@ $myposts_experience = get_posts( $args_experience );
                                 ?>
                             </div>
                         </div>
-                        <div class="list-post-mobile">
+                        <div class="list-post-mobile"
+                             data-aos="fade-up"
+                             data-aos-duration="1000"
+                             data-aos-easing="ease-in-sine"  data-aos-delay="50">
                             <div class="swiper post-list-mobile">
                                 <div class="swiper-wrapper list-post">
                                     <?php
@@ -309,7 +374,11 @@ $myposts_experience = get_posts( $args_experience );
                                 </div>
                             </div>
                         </div>
-                        <div class="link-all-mobile text-center">
+                        <div class="link-all-mobile text-center"
+                             data-aos="fade-down"
+                             data-aos-duration="1000"
+                             data-aos-easing="ease-in-sine"  data-aos-delay="50"
+                        >
                             <a href="<?php echo $link_all_post; ?>" class="action-arrow-right-blue">Xem tất cả bài viết</a>
                         </div>
                     </div>

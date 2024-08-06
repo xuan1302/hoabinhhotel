@@ -21,7 +21,11 @@ $num_child = isset($_GET['children']) ? sanitize_text_field( $_GET['children'] )
 
     <div class="content-template-booking">
         <div class="banner" style="background-image: url(<?php echo $banner['url']; ?>);">
-            <div class="custom-container">
+            <div class="custom-container"
+                 data-aos="fade-down"
+                 data-aos-duration="1000"
+                 data-aos-easing="ease-in-sine"  data-aos-delay="50"
+            >
                 <h2 class="title"><?php echo $title; ?></h2>
                 <h3 class="sub-title"><?php echo $sub_title; ?></h3>
             </div>
@@ -30,7 +34,10 @@ $num_child = isset($_GET['children']) ? sanitize_text_field( $_GET['children'] )
             <div class="booking-f">
                 <div class="">
                     <div class="container">
-                        <div class="content-form-booking">
+                        <div class="content-form-booking"
+                             data-aos="fade-down"
+                             data-aos-duration="1000"
+                             data-aos-easing="ease-in-sine"  data-aos-delay="50">
                             <div class="form-booking">
                                 <div class="date-range">
                                     <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-calandar.svg" alt="">
@@ -111,7 +118,11 @@ $num_child = isset($_GET['children']) ? sanitize_text_field( $_GET['children'] )
                                             foreach ($myposts_system_room as $item) {
                                                 $price = number_format(get_post_meta( $item->ID, 'price', true), 0,'','.');
                                                 ?>
-                                                <div class="item item-room-booking">
+                                                <div class="item item-room-booking"
+                                                     data-aos="fade-up"
+                                                     data-aos-duration="1000"
+                                                     data-aos-easing="ease-in-sine"  data-aos-delay="50"
+                                                >
                                                     <div class="img">
                                                         <div class="thumbnail">
                                                                 <?php
@@ -164,7 +175,11 @@ $num_child = isset($_GET['children']) ? sanitize_text_field( $_GET['children'] )
                                 <?php }
                                 ?>
                             </div>
-                            <div class="col-4 item-bk item-sticky">
+                            <div class="col-4 item-bk item-sticky"
+                                 data-aos="fade-left"
+                                 data-aos-duration="1000"
+                                 data-aos-easing="ease-in-sine"  data-aos-delay="50"
+                            >
                                 <div class="book-now ">
                                     <div class="total-room">
                                         <span id="totalRoom">0</span> phòng

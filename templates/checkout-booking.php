@@ -30,7 +30,11 @@ $hotline_footer = get_field('hotline_footer', 'option');
                     Chỉnh sửa thông tin liên hệ</a>
             </div>
             <div class="content-checkout-booking">
-                <div class="left-content">
+                <div class="left-content"
+                     data-aos="fade-right"
+                     data-aos-duration="1000"
+                     data-aos-easing="ease-in-sine"  data-aos-delay="50"
+                >
                     <h4 class="title">Thông tin đặt phòng</h4>
                     <div class="list-room-booking">
                         <?php
@@ -103,7 +107,11 @@ $hotline_footer = get_field('hotline_footer', 'option');
                         </div>
                     </div>
                 </div>
-                <div class="right-content">
+                <div class="right-content"
+                     data-aos="fade-left"
+                     data-aos-duration="1000"
+                     data-aos-easing="ease-in-sine"  data-aos-delay="50"
+                >
                     <?php
                         if(isset($_GET['formSubmitted'])){ ?>
                             <div class="info-prepayment">

@@ -1,4 +1,5 @@
 (function ($) {
+  AOS.init();
   $(document).ready(function() {
     swiperCard();
     $(window).resize(swiperCard);

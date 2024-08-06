@@ -18,12 +18,24 @@ $map = get_field( "map" );
 
 <div class="content-template-contact">
     <div class="banner" style="background-image: url(<?php echo $banner['url']; ?>);">
-        <h2 class="title"><?php echo $title; ?></h2>
-        <h3 class="sub-title"><?php echo $sub_title; ?></h3>
+        <h2 class="title"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-sine"  data-aos-delay="50"
+        ><?php echo $title; ?></h2>
+        <h3 class="sub-title"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-sine"  data-aos-delay="50"
+        ><?php echo $sub_title; ?></h3>
     </div>
     <div class="content-contact">
         <div class="custom-container">
-            <div class="item left-ct">
+            <div class="item left-ct"
+                 data-aos="fade-right"
+                 data-aos-duration="1000"
+                 data-aos-easing="ease-in-sine"  data-aos-delay="50"
+            >
                 <h4 class="title1">
                     <?php echo $title1; ?>
                 </h4>
@@ -52,7 +64,11 @@ $map = get_field( "map" );
                     </div>
                 </div>
             </div>
-            <div class="item right-ct">
+            <div class="item right-ct"
+                 data-aos="fade-left"
+                 data-aos-duration="1000"
+                 data-aos-easing="ease-in-sine"  data-aos-delay="50"
+            >
                 <h3 class="title-fo">Gửi tin nhắn cho Hòa Bình Hotel</h3>
                 <?php echo do_shortcode($shortcode); ?>
             </div>

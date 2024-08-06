@@ -26,10 +26,18 @@ $myposts_system_room = get_posts($args_system_room);
     <div class="content-about-us">
         <div class="single-banner" style="background-image: url(<?php echo $banner['url']; ?>)">
             <div class="banner-contain">
-                <div class="single-title">
+                <div class="single-title"
+                     data-aos="fade-down"
+                     data-aos-duration="1000"
+                     data-aos-easing="ease-in-sine"  data-aos-delay="50"
+                >
                     <h1><?php the_title()?></h1>
                 </div>
-                <div class="single-des">
+                <div class="single-des"
+                     data-aos="fade-down"
+                     data-aos-duration="1000"
+                     data-aos-easing="ease-in-sine"  data-aos-delay="50"
+                >
                     <p><?php echo $des; ?></p>
                 </div>
             </div>
@@ -37,14 +45,22 @@ $myposts_system_room = get_posts($args_system_room);
         <section id='' class="section-contain section-contain-1">
             <div class="container-fluid">
                 <div class="row first-section">
-                    <div class="section-left col-xl-5 col-12">
+                    <div class="section-left col-xl-5 col-12"
+                         data-aos="fade-right"
+                         data-aos-duration="1000"
+                         data-aos-easing="ease-in-sine"  data-aos-delay="50"
+                    >
                         <div class="inner">
                             <h2 class="title"><?php echo $title_1 ?></h2>
                             <h2 class="main-title"><?php echo $main_title_1 ?></h2>
                             <p class="description"><?php echo $des_1 ?></p>
                         </div>
                     </div>
-                    <div class="section-right col-xl-7 col-12">
+                    <div class="section-right col-xl-7 col-12"
+                         data-aos="fade-left"
+                         data-aos-duration="1000"
+                         data-aos-easing="ease-in-sine"  data-aos-delay="50"
+                    >
                         <img  class="image" src="<?php echo $image_1['url']?>" />
                     </div>
                 </div>
@@ -53,10 +69,18 @@ $myposts_system_room = get_posts($args_system_room);
         <section id='' class="section-contain section-contain-2">
             <div class="container-fluid">
                 <div class="row first-section">
-                    <div class="section-left text-right col-xl-7 col-12">
+                    <div class="section-left text-right col-xl-7 col-12"
+                         data-aos="fade-right"
+                         data-aos-duration="1000"
+                         data-aos-easing="ease-in-sine"  data-aos-delay="50"
+                    >
                         <img  class="image" src="<?php echo $image_2['url']?>" />
                     </div>
-                    <div class="section-right col-xl-5 col-12">
+                    <div class="section-right col-xl-5 col-12"
+                         data-aos="fade-left"
+                         data-aos-duration="1000"
+                         data-aos-easing="ease-in-sine"  data-aos-delay="50"
+                    >
                         <div class="inner">
                             <h2 class="title"><?php echo $title_2 ?></h2>
                             <h2 class="main-title"><?php echo $main_title_2 ?></h2>
@@ -70,7 +94,11 @@ $myposts_system_room = get_posts($args_system_room);
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <div class="inner">
+                        <div class="inner"
+                             data-aos="fade-down"
+                             data-aos-duration="1000"
+                             data-aos-easing="ease-in-sine"  data-aos-delay="50"
+                        >
                             <h2 class="title"><?php echo $title_3 ?></h2>
                             <h2 class="main-title"><?php echo $main_title_3 ?></h2>
                             <p class="description"><?php echo $des_3 ?></p>
@@ -80,7 +108,11 @@ $myposts_system_room = get_posts($args_system_room);
             </div>
         </section>
         <section class="section-slide">
-            <div class="slide-image-contain">
+            <div class="slide-image-contain"
+                 data-aos="fade-up"
+                 data-aos-duration="1000"
+                 data-aos-easing="ease-in-sine"  data-aos-delay="50"
+            >
                 <div class="swiper slide-list-image">
                     <div class="swiper-wrapper">
                         <?php
@@ -104,8 +136,16 @@ $myposts_system_room = get_posts($args_system_room);
         if($myposts_system_room) { ?>
             <div class="section-system-room">
                 <div class="system-room-container">
-                    <h3 class="title">Hệ thống phòng nghỉ</h3>
-                    <div class="list-system-rooms swiper">
+                    <h3 class="title"
+                        data-aos="fade-down"
+                        data-aos-duration="1000"
+                        data-aos-easing="ease-in-sine"  data-aos-delay="50"
+                    >Hệ thống phòng nghỉ</h3>
+                    <div class="list-system-rooms swiper"
+                         data-aos="fade-up"
+                         data-aos-duration="1000"
+                         data-aos-easing="ease-in-sine"  data-aos-delay="50"
+                    >
                         <div class="swiper-wrapper room-wrapper">
                             <?php
                             foreach ($myposts_system_room as $item) { ?>

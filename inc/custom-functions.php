@@ -14,6 +14,7 @@ function xxx_scripts() {
     wp_enqueue_style('bootstrap-css' , THEME_URL . 'asset/css/bootstrap.min.css');
     wp_enqueue_style('swiper-css' , THEME_URL . 'asset/css/swiper.min.css');
     wp_enqueue_style('daterangepicker-css' , THEME_URL . 'asset/css/daterangepicker.css');
+    wp_enqueue_style('aos-css' , THEME_URL . 'asset/css/aos.css');
     wp_enqueue_style('style-css' , THEME_URL . 'asset/css/style.css');
     wp_enqueue_style('aboutus-css' , THEME_URL . 'asset/css/aboutus.css');
     wp_enqueue_style('service-css' , THEME_URL . 'asset/css/service.css');
@@ -24,6 +25,7 @@ function xxx_scripts() {
     wp_enqueue_script( 'swiper-js', get_template_directory_uri() . '/asset/js/swiper-bundle.min.js', array( ), THEME_VERSION, true );
     wp_enqueue_script( 'moment-js', get_template_directory_uri() . '/asset/js/moment.min.js', array( ), THEME_VERSION, true );
     wp_enqueue_script( 'daterange-js', get_template_directory_uri() . '/asset/js/daterangepicker.js', array( ), THEME_VERSION, true );
+    wp_enqueue_script( 'aos-js', get_template_directory_uri() . '/asset/js/aos.js', array( ), THEME_VERSION, true );
     wp_enqueue_script( 'custom-js', get_template_directory_uri() . '/asset/js/custom.js', array( ), THEME_VERSION, true );
         wp_enqueue_script( 'common-js', get_template_directory_uri() . '/asset/js/common.js', array( ), THEME_VERSION, true );
         wp_enqueue_script( 'booking-js', get_template_directory_uri() . '/asset/js/booking.js', array( ), THEME_VERSION, true );
