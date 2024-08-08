@@ -7,7 +7,7 @@
     });
 
     // header not position
-    $('.content-template-checkout-booking').parent('#page').addClass('header-init');
+    $('.content-template-checkout-booking, .single-page, .page-404').parent('#page').addClass('header-init');
     // show hide
     $('.select-person .icon').click(function(){
         $('.change-number-person').toggleClass('active');

@@ -10,7 +10,7 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main container">
+	<main id="primary" class="site-main container page-404">
 
 		<section class="page_404">
 		  <div class="container">

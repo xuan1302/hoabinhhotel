@@ -23,6 +23,7 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open();
 $logo = get_field('logo', 'option');
+$logo_color = get_field('logo_color', 'option');
 $address_topbar = get_field('address_topbar', 'option');
 $link_map = get_field('link_map', 'option');
 $hotline_topbar = get_field('hotline_topbar', 'option');
@@ -109,6 +110,7 @@ $name_facebook = get_field('name_facebook', 'option');
                 <h1 class="site-title">
                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
                         <img src="<?php echo $logo['url']; ?>" alt="">
+                        <img class="logo-color" src="<?php echo $logo_color['url']; ?>" alt="">
 <!--                        --><?php //bloginfo( 'name' ); ?>
                     </a>
                 </h1>
