@@ -109,7 +109,7 @@ $name_facebook = get_field('name_facebook', 'option');
                 <h1 class="site-title">
                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
                         <img src="<?php echo $logo['url']; ?>" alt="">
-                        <?php bloginfo( 'name' ); ?>
+<!--                        --><?php //bloginfo( 'name' ); ?>
                     </a>
                 </h1>
             </div>
