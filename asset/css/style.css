@@ -387,9 +387,9 @@ h1.site-title{
     margin-bottom: 16px;
 }
 .site-branding .site-title img{
-    border-radius: 50%;
-    width: 28px;
-    height: 28px;
+    /*border-radius: 50%;*/
+    /*width: 28px;*/
+    /*height: 28px;*/
 }
 .site-branding .site-title a{
     display: flex;
@@ -1856,4 +1856,10 @@ a.action-yellow-arr-right:active,
     margin-bottom: 24px;
     text-align: center;
     color: #002D4A;
+}
+.header-init .site-branding .site-title img, .site-branding .site-title img.logo-color{
+    display: none;
+}
+.header-init .site-branding .site-title img.logo-color{
+    display: block;
 }
