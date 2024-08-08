@@ -98,6 +98,9 @@
     .content-contact > .custom-container{
         flex-direction: column;
     }
+    .option-room{
+        flex-wrap: wrap;
+    }
 }
 @media only screen and (max-width: 991px) {
     .about-us-home .content .right-col h5, .about-us-home .content .right-col h4{
