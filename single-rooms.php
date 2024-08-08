@@ -308,7 +308,7 @@ $list_image_room = get_field( "image_room" );
                                 </div>
                             </div>
                             <div class="btn-book">
-                                <a href="#">Đặt phòng này <img src="<?php bloginfo('template_url'); ?>/asset/images/arrow-right.svg" alt=""></a>
+                                <a href="#">Đặt phòng<img src="<?php bloginfo('template_url'); ?>/asset/images/arrow-right.svg" alt=""></a>
                             </div>
                         </div>
                     </div>
@@ -434,7 +434,7 @@ $list_image_room = get_field( "image_room" );
                                                 </div>
                                                 <div class="link-to-room">
                                                     <a href="<?php echo get_permalink($item->ID); ?>">Chi tiết phòng</a>
-                                                    <a href="<?php echo home_url('/booking/'); ?>" class="booking-link">ĐẶT PHÒNG NÀY <img src="<?php bloginfo('template_url'); ?>/asset/icons/arrow-right-black.png" alt=""></a>
+                                                    <a href="<?php echo home_url('/booking/'); ?>" class="booking-link">ĐẶT PHÒNG<img src="<?php bloginfo('template_url'); ?>/asset/icons/arrow-right-black.png" alt=""></a>
                                                 </div>
                                             </div>
                                         </div>
