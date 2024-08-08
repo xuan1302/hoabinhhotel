@@ -162,7 +162,7 @@ $myposts_experience = get_posts( $args_experience );
                             data-aos="fade-down"
                             data-aos-duration="1000"
                             data-aos-easing="ease-in-sine"  data-aos-delay="50"
-                        >Hệ thông phòng nghỉ</h3>
+                        >Hệ thống phòng nghỉ</h3>
                         <div class="list-post-system"
                              data-aos="fade-up"
                              data-aos-duration="1000"
@@ -206,7 +206,7 @@ $myposts_experience = get_posts( $args_experience );
                                                 </div>
                                                 <div class="link-to-room">
                                                     <a href="<?php echo get_permalink($item->ID); ?>">Chi tiết phòng</a>
-                                                    <a href="<?php echo home_url('/booking/'); ?>" class="">Đặt phòng này<img src="<?php bloginfo('template_url'); ?>/asset/icons/arrow-right-black.svg" alt=""></a>
+                                                    <a href="<?php echo home_url('/booking/'); ?>" class="">Đặt phòng<img src="<?php bloginfo('template_url'); ?>/asset/icons/arrow-right-black.svg" alt=""></a>
                                                 </div>
                                             </div>
                                         </div>

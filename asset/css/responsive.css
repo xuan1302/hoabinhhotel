@@ -147,6 +147,9 @@
     .content-checkout-booking .info-bottom .item-right{
         width: 150px;
     }
+    .option-room .op{
+        gap: 4px;
+    }
 }
 @media only screen and (max-width: 800px) {
     .about-us-home .right-col{
@@ -320,7 +323,33 @@
         font-size: 24px;
     }
 }
-@media only screen and (max-width: 480px) {
+
+@media only screen and (min-width: 1200px) and (max-width: 1280px) {
+    #menu-main-right li:last-child a{
+        padding: 10px 10px 10px 38px;
+    }
+    #menu-main-right li:last-child a:after{
+        top: 10px;
+        left: 10px;
+    }
+    #menu-main-left > li{
+        padding-right: 10px;
+    }
+    #menu-main-left li.menu-item-has-children {
+        padding-right: 10px;
+    }
+    #menu-main-right > li{
+        padding-left: 10px;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .option-room{
+        gap: 4px;
+    }
+    .option-room .op{
+        gap: 2px;
+    }
 
 }
 @media only screen and (max-width: 375px) {
