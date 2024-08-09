@@ -1863,3 +1863,15 @@ a.action-yellow-arr-right:active,
 .header-init .site-branding .site-title img.logo-color{
     display: block;
 }
+.single-post .header-init .footer-top, .error404 .header-init .footer-top{
+    display: block;
+}
+.entry-image .entry-summary{
+    margin-bottom: 16px;
+}
+.icon-menu-mobile .icon-menu-color, .header-init .site-header .icon-menu-mobile img{
+    display: none;
+}
+.header-init .site-header .icon-menu-mobile .icon-menu-color{
+    display: block;
+}
