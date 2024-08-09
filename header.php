@@ -130,6 +130,7 @@ $name_facebook = get_field('name_facebook', 'option');
             </div>
             <div class="icon-menu-mobile">
                 <img src="<?php bloginfo('template_url'); ?>/asset/icons/icon-menu-mobile.svg" alt="">
+                <img class="icon-menu-color" src="<?php bloginfo('template_url'); ?>/asset/icons/menu-icon.svg" alt="">
             </div>
         </div>
 	</header><!-- #masthead -->
