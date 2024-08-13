@@ -895,7 +895,7 @@ a.action-arrow-right-blue{
 .main-navigation-mobile ul.menu ul.sub-menu > li:nth-child(4) a:after{
     background-image: url("../icons/icon-room-3-black.svg");
 }
-.main-navigation-mobile ul.menu ul.sub-menu > li:nth-child(4) a:after{
+.main-navigation-mobile ul.menu ul.sub-menu > li:nth-child(5) a:after{
     background-image: url("../icons/icon-room-vip-black.svg");
 }
 #menu-mobile > li:last-child{
