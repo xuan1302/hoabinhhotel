@@ -369,7 +369,9 @@ $list_image_room = get_field( "image_room" );
                             <div class="list-system-rooms swiper">
                                 <div class="swiper-wrapper">
                                     <?php
-                                    foreach ($myposts_system_room as $item) { ?>
+                                    foreach ($myposts_system_room as $item) {
+                                        $price = number_format(get_post_meta( $item->ID, 'price', true  ), 0,'','.');
+                                        ?>
                                         <div class="swiper-slide item">
                                             <div class="img">
                                                 <div class="thumbnail">
@@ -387,9 +389,9 @@ $list_image_room = get_field( "image_room" );
                                                 <div class="price">
                                                     <p>
                                                         <?php
-                                                        if ($number) {
-                                                            $formatted_number = number_format($number, 0, '', '.');
-                                                            echo 'Từ ' . $formatted_number . ' VND/đêm';
+                                                        if ($price) {
+//                                                            $formatted_number = number_format($number, 0, '', '.');
+                                                            echo 'Từ ' . $price . ' VND/đêm';
                                                         }
                                                         ?>
                                                     </p>
