@@ -367,7 +367,7 @@ $list_image_room = get_field( "image_room" );
                         <div class="system-room-container">
                             <h3 class="title">Hệ thống phòng nghỉ</h3>
                             <div class="list-system-rooms swiper">
-                                <div class="swiper-wrapper">
+                                <div class="swiper-wrapper room-wrapper">
                                     <?php
                                     foreach ($myposts_system_room as $item) {
                                         $price = number_format(get_post_meta( $item->ID, 'price', true  ), 0,'','.');
