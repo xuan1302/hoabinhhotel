@@ -21,6 +21,7 @@ $website_fotoer = get_field('website_fotoer', 'option');
 $coppy_right = get_field('coppy_right', 'option');
 $image_right_footer = get_field('image_right_footer', 'option');
 $link_facebook = get_field('link_facebook', 'option');
+$phone_zalo = get_field('phone_number_zalo', 'option');
 ?>
 	<footer id="colophon" class="site-footer">
 		<div class="footer-top" style="background-image: url(<?php echo $backgound_footer_top['url']; ?>);">
@@ -87,7 +88,7 @@ $link_facebook = get_field('link_facebook', 'option');
             </a>
         </li>
         <li>
-            <a target="_blank" href="https://zalo.me/<?php echo $hotline_footer; ?>"
+            <a target="_blank" href="https://zalo.me/<?php echo $phone_zalo; ?>"
                aria-label="zalo">
                 <img src="<?php bloginfo('template_url'); ?>/asset/icons/bxs_phone-1.svg"
                      alt="" width="44px" height="44px">
